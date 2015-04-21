@@ -1,4 +1,0 @@
-EN test_wavreader NULL C:/Users/lab/Desktop/swks/wav_player/Test_WAVreader.vhf sub00/vhpl02 1429606879
-AR fsm_sendsamples behavioral C:/Users/lab/Desktop/swks/wav_player/FSM_SendSamples.vhd sub00/vhpl01 1429603775
-EN fsm_sendsamples NULL C:/Users/lab/Desktop/swks/wav_player/FSM_SendSamples.vhd sub00/vhpl00 1429603774
-AR test_wavreader behavioral C:/Users/lab/Desktop/swks/wav_player/Test_WAVreader.vhf sub00/vhpl03 1429606880
