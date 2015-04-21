@@ -3,13 +3,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 0.00 secs
+Total REAL time to Xst completion: 1.00 secs
 Total CPU time to Xst completion: 0.12 secs
  
 --> Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 0.00 secs
+Total REAL time to Xst completion: 1.00 secs
 Total CPU time to Xst completion: 0.12 secs
  
 --> Reading design: Test_WAVreader.prj
@@ -104,14 +104,9 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 *                          HDL Compilation                              *
 =========================================================================
-WARNING:HDLParsers:3607 - Unit work/Test_WAVreader is now defined in a different file.  It was defined in "C:/Users/lab/Desktop/swks/wav_player/Test_WAVreader.vhf", and is now defined in "C:/Users/lab/Desktop/swks/wav_player_v1/Test_WAVreader.vhf".
-WARNING:HDLParsers:3607 - Unit work/Test_WAVreader/BEHAVIORAL is now defined in a different file.  It was defined in "C:/Users/lab/Desktop/swks/wav_player/Test_WAVreader.vhf", and is now defined in "C:/Users/lab/Desktop/swks/wav_player_v1/Test_WAVreader.vhf".
-WARNING:HDLParsers:3607 - Unit work/FSM_SendSamples is now defined in a different file.  It was defined in "C:/Users/lab/Desktop/swks/wav_player/FSM_SendSamples.vhd", and is now defined in "C:/Users/lab/Desktop/swks/wav_player_v1/FSM_SendSamples.vhd".
-WARNING:HDLParsers:3607 - Unit work/FSM_SendSamples/Behavioral is now defined in a different file.  It was defined in "C:/Users/lab/Desktop/swks/wav_player/FSM_SendSamples.vhd", and is now defined in "C:/Users/lab/Desktop/swks/wav_player_v1/FSM_SendSamples.vhd".
-Compiling vhdl file "C:/Users/lab/Desktop/swks/wav_player_v1/FSM_SendSamples.vhd" in Library work.
-Architecture behavioral of Entity fsm_sendsamples is up to date.
 Compiling vhdl file "C:/Users/lab/Desktop/swks/wav_player_v1/Test_WAVreader.vhf" in Library work.
-Architecture behavioral of Entity test_wavreader is up to date.
+Entity <test_wavreader> compiled.
+Entity <test_wavreader> (Architecture <behavioral>) compiled.
 
 =========================================================================
 *                     Design Hierarchy Analysis                         *
@@ -125,11 +120,15 @@ Analyzing hierarchy for entity <FSM_SendSamples> in library <work> (architecture
 *                            HDL Analysis                               *
 =========================================================================
 Analyzing Entity <Test_WAVreader> in library <work> (Architecture <behavioral>).
-WARNING:Xst:2211 - "C:/Users/lab/Desktop/swks/wav_player_v1/Test_WAVreader.vhf" line 166: Instantiating black box module <RotaryEnc>.
-WARNING:Xst:2211 - "C:/Users/lab/Desktop/swks/wav_player_v1/Test_WAVreader.vhf" line 173: Instantiating black box module <WAVreader>.
-WARNING:Xst:753 - "C:/Users/lab/Desktop/swks/wav_player_v1/Test_WAVreader.vhf" line 209: Unconnected output port 'SF_CE0' of component 'DACWrite'.
-WARNING:Xst:2211 - "C:/Users/lab/Desktop/swks/wav_player_v1/Test_WAVreader.vhf" line 209: Instantiating black box module <DACWrite>.
-WARNING:Xst:2211 - "C:/Users/lab/Desktop/swks/wav_player_v1/Test_WAVreader.vhf" line 229: Instantiating black box module <LCD1x64>.
+WARNING:Xst:2211 - "C:/Users/lab/Desktop/swks/wav_player_v1/Test_WAVreader.vhf" line 193: Instantiating black box module <RotaryEnc>.
+WARNING:Xst:2211 - "C:/Users/lab/Desktop/swks/wav_player_v1/Test_WAVreader.vhf" line 200: Instantiating black box module <WAVreader>.
+WARNING:Xst:753 - "C:/Users/lab/Desktop/swks/wav_player_v1/Test_WAVreader.vhf" line 236: Unconnected output port 'SF_CE0' of component 'DACWrite'.
+WARNING:Xst:2211 - "C:/Users/lab/Desktop/swks/wav_player_v1/Test_WAVreader.vhf" line 236: Instantiating black box module <DACWrite>.
+WARNING:Xst:2211 - "C:/Users/lab/Desktop/swks/wav_player_v1/Test_WAVreader.vhf" line 256: Instantiating black box module <LCD1x64>.
+WARNING:Xst:2211 - "C:/Users/lab/Desktop/swks/wav_player_v1/Test_WAVreader.vhf" line 283: Instantiating black box module <PS2_Kbd>.
+WARNING:Xst:753 - "C:/Users/lab/Desktop/swks/wav_player_v1/Test_WAVreader.vhf" line 293: Unconnected output port 'LCD_WE' of component 'KbdDecode'.
+WARNING:Xst:753 - "C:/Users/lab/Desktop/swks/wav_player_v1/Test_WAVreader.vhf" line 293: Unconnected output port 'LCD_DnI' of component 'KbdDecode'.
+WARNING:Xst:2211 - "C:/Users/lab/Desktop/swks/wav_player_v1/Test_WAVreader.vhf" line 293: Instantiating black box module <KbdDecode>.
 Entity <Test_WAVreader> analyzed. Unit <Test_WAVreader> generated.
 
 Analyzing Entity <FSM_SendSamples> in library <work> (Architecture <behavioral>).
@@ -167,7 +166,7 @@ Unit <FSM_SendSamples> synthesized.
 
 Synthesizing Unit <Test_WAVreader>.
     Related source file is "C:/Users/lab/Desktop/swks/wav_player_v1/Test_WAVreader.vhf".
-WARNING:Xst:653 - Signal <Line<63:16>> is used but never assigned. This sourceless signal will be automatically connected to value 000000000000000000000000000000000000000000000000.
+WARNING:Xst:653 - Signal <Line<63:24>> is used but never assigned. This sourceless signal will be automatically connected to value 0000000000000000000000000000000000000000.
 Unit <Test_WAVreader> synthesized.
 
 
@@ -197,10 +196,12 @@ Reading core <RotaryEnc.ngc>.
 Reading core <WAVreader.ngc>.
 Reading core <DACWrite.ngc>.
 Reading core <LCD1x64.ngc>.
+Reading core <PS2_Kbd.ngc>.
 Loading core <RotaryEnc> for timing and area information for instance <XLXI_1>.
 Loading core <WAVreader> for timing and area information for instance <XLXI_2>.
 Loading core <DACWrite> for timing and area information for instance <XLXI_31>.
 Loading core <LCD1x64> for timing and area information for instance <XLXI_40>.
+Loading core <PS2_Kbd> for timing and area information for instance <XLXI_82>.
 
 =========================================================================
 Advanced HDL Synthesis Report
@@ -218,7 +219,7 @@ Optimizing unit <Test_WAVreader> ...
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block Test_WAVreader, actual ratio is 18.
+Found area constraint ratio of 100 (+ 5) on block Test_WAVreader, actual ratio is 19.
 INFO:Xst:2260 - The FF/Latch <cntDigit_0> in Unit <XLXI_40> is equivalent to the following 4 FFs/Latches : <cntDigit_0_1> <cntDigit_0_2> <cntDigit_0_3> <cntDigit_0_4> 
 INFO:Xst:2260 - The FF/Latch <cntDigit_1> in Unit <XLXI_40> is equivalent to the following 2 FFs/Latches : <cntDigit_1_1> <cntDigit_1_2> 
 INFO:Xst:2260 - The FF/Latch <State_16> in Unit <XLXI_40> is equivalent to the following FF/Latch : <State_16_1> 
@@ -259,37 +260,37 @@ Optimization Goal                  : Speed
 Keep Hierarchy                     : No
 
 Design Statistics
-# IOs                              : 35
+# IOs                              : 37
 
 Cell Usage :
-# BELS                             : 2130
+# BELS                             : 2187
 #      BUF                         : 4
-#      GND                         : 5
-#      INV                         : 59
-#      LUT1                        : 96
-#      LUT2                        : 186
+#      GND                         : 6
+#      INV                         : 63
+#      LUT1                        : 103
+#      LUT2                        : 196
 #      LUT2_D                      : 7
 #      LUT2_L                      : 10
-#      LUT3                        : 325
+#      LUT3                        : 332
 #      LUT3_D                      : 15
 #      LUT3_L                      : 19
-#      LUT4                        : 653
-#      LUT4_D                      : 56
-#      LUT4_L                      : 70
+#      LUT4                        : 661
+#      LUT4_D                      : 57
+#      LUT4_L                      : 73
 #      MULT_AND                    : 9
-#      MUXCY                       : 283
+#      MUXCY                       : 290
 #      MUXF5                       : 46
 #      MUXF6                       : 10
 #      MUXF7                       : 5
 #      OR2                         : 2
-#      VCC                         : 5
-#      XORCY                       : 265
-# FlipFlops/Latches                : 730
-#      FD                          : 114
+#      VCC                         : 6
+#      XORCY                       : 273
+# FlipFlops/Latches                : 767
+#      FD                          : 125
 #      FDC                         : 3
-#      FDE                         : 169
-#      FDR                         : 96
-#      FDRE                        : 205
+#      FDE                         : 185
+#      FDR                         : 97
+#      FDRE                        : 214
 #      FDRS                        : 19
 #      FDRSE                       : 9
 #      FDS                         : 113
@@ -300,10 +301,12 @@ Cell Usage :
 #      SRL16                       : 2
 # Clock Buffers                    : 1
 #      BUFGP                       : 1
-# IO Buffers                       : 34
-#      IBUF                        : 9
+# IO Buffers                       : 36
+#      IBUF                        : 11
 #      IOBUF                       : 4
 #      OBUF                        : 21
+# Others                           : 1
+#      KbdDecode                   : 1
 =========================================================================
 
 Device utilization summary:
@@ -311,13 +314,13 @@ Device utilization summary:
 
 Selected Device : 3s500efg320-4 
 
- Number of Slices:                      867  out of   4656    18%  
- Number of Slice Flip Flops:            730  out of   9312     7%  
- Number of 4 input LUTs:               1498  out of   9312    16%  
-    Number used as logic:              1496
+ Number of Slices:                      892  out of   4656    19%  
+ Number of Slice Flip Flops:            767  out of   9312     8%  
+ Number of 4 input LUTs:               1538  out of   9312    16%  
+    Number used as logic:              1536
     Number used as Shift registers:       2
- Number of IOs:                          35
- Number of bonded IOBs:                  35  out of    232    15%  
+ Number of IOs:                          37
+ Number of bonded IOBs:                  37  out of    232    15%  
  Number of BRAMs:                         1  out of     20     5%  
  Number of GCLKs:                         1  out of     24     4%  
 
@@ -342,7 +345,7 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-Clk_50MHz                          | BUFGP                  | 733   |
+Clk_50MHz                          | BUFGP                  | 770   |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
@@ -369,7 +372,7 @@ All values displayed in nanoseconds (ns)
 =========================================================================
 Timing constraint: Default period analysis for Clock 'Clk_50MHz'
   Clock period: 11.111ns (frequency: 90.004MHz)
-  Total number of paths / destination ports: 39628 / 1530
+  Total number of paths / destination ports: 39926 / 1600
 -------------------------------------------------------------------------
 Delay:               11.111ns (Levels of Logic = 7)
   Source:            XLXI_2/XLXI_1/XLXI_89/cntBytes_5 (FF)
@@ -396,7 +399,7 @@ Delay:               11.111ns (Levels of Logic = 7)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'Clk_50MHz'
-  Total number of paths / destination ports: 200 / 180
+  Total number of paths / destination ports: 251 / 190
 -------------------------------------------------------------------------
 Offset:              10.065ns (Levels of Logic = 10)
   Source:            SW_2 (PAD)
@@ -424,7 +427,7 @@ Offset:              10.065ns (Levels of Logic = 10)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'Clk_50MHz'
-  Total number of paths / destination ports: 41 / 18
+  Total number of paths / destination ports: 53 / 29
 -------------------------------------------------------------------------
 Offset:              7.731ns (Levels of Logic = 4)
   Source:            XLXI_2/XLXI_1/XLXI_86/XLXI_2/State_2 (FF)
@@ -456,7 +459,7 @@ Delay:               7.263ns (Levels of Logic = 4)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     BUFGP:I->O          735   1.457   1.410  Clk_50MHz_BUFGP (Clk_50MHz_BUFGP)
+     BUFGP:I->O          772   1.457   1.410  Clk_50MHz_BUFGP (Clk_50MHz_BUFGP)
      begin scope: 'XLXI_31'
      INV:I->O              1   0.704   0.420  SPI_SCK1_INV_0 (SPI_SCK)
      end scope: 'XLXI_31'
@@ -468,12 +471,12 @@ Delay:               7.263ns (Levels of Logic = 4)
 =========================================================================
 
 
-Total REAL time to Xst completion: 9.00 secs
-Total CPU time to Xst completion: 9.19 secs
+Total REAL time to Xst completion: 10.00 secs
+Total CPU time to Xst completion: 9.63 secs
  
 --> 
 
-Total memory usage is 223880 kilobytes
+Total memory usage is 223944 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :   12 (   0 filtered)

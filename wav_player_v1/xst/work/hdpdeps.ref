@@ -1,4 +1,4 @@
-V3 15
+V3 17
 FL C:/Users/lab/Desktop/swks/wav_player/FSM_SendSamples.vhd 2015/04/21.08:50:56 P.20131013
 FL C:/Users/lab/Desktop/swks/wav_player/Test_WAVreader.vhf 2015/04/21.10:09:30 P.20131013
 FL C:/Users/lab/Desktop/swks/wav_player_v1/FSM_SendSamples.vhd 2015/04/21.08:50:56 P.20131013
@@ -8,12 +8,12 @@ EN work/FSM_SendSamples 1429606937 \
 AR work/FSM_SendSamples/Behavioral 1429606938 \
       FL C:/Users/lab/Desktop/swks/wav_player_v1/FSM_SendSamples.vhd \
       EN work/FSM_SendSamples 1429606937
-FL C:/Users/lab/Desktop/swks/wav_player_v1/Test_WAVreader.vhf 2015/04/21.10:09:30 P.20131013
-EN work/Test_WAVreader 1429606939 \
+FL C:/Users/lab/Desktop/swks/wav_player_v1/Test_WAVreader.vhf 2015/04/21.12:39:54 P.20131013
+EN work/Test_WAVreader 1429612797 \
       FL C:/Users/lab/Desktop/swks/wav_player_v1/Test_WAVreader.vhf \
       PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181 LB UNISIM \
       PH unisim/VCOMPONENTS 1381692182
-AR work/Test_WAVreader/BEHAVIORAL 1429606940 \
+AR work/Test_WAVreader/BEHAVIORAL 1429612798 \
       FL C:/Users/lab/Desktop/swks/wav_player_v1/Test_WAVreader.vhf \
-      EN work/Test_WAVreader 1429606939 CP RotaryEnc CP WAVreader \
-      CP FSM_SendSamples CP DACWrite CP LCD1x64 CP BUF
+      EN work/Test_WAVreader 1429612797 CP RotaryEnc CP WAVreader \
+      CP FSM_SendSamples CP DACWrite CP LCD1x64 CP BUF CP PS2_Kbd CP KbdDecode
