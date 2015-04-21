@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="warning" file="HDLCompiler" num="89" delta="unknown" >"C:/Users/lab/Desktop/swks/wav_player/Test_WAVreader.vhf" Line 166: &lt;<arg fmt="%s" index="1">rotaryenc</arg>&gt; remains a black-box since it has no binding entity.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="89" delta="unknown" >"C:/Users/lab/Desktop/swks/wav_player/Test_WAVreader.vhf" Line 173: &lt;<arg fmt="%s" index="1">wavreader</arg>&gt; remains a black-box since it has no binding entity.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="89" delta="unknown" >"C:/Users/lab/Desktop/swks/wav_player/Test_WAVreader.vhf" Line 209: &lt;<arg fmt="%s" index="1">dacwrite</arg>&gt; remains a black-box since it has no binding entity.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="89" delta="unknown" >"C:/Users/lab/Desktop/swks/wav_player/Test_WAVreader.vhf" Line 229: &lt;<arg fmt="%s" index="1">lcd1x64</arg>&gt; remains a black-box since it has no binding entity.
+</msg>
+
+<msg type="warning" file="Simulator" num="648" delta="unknown" >&quot;<arg fmt="%s" index="1">C:/Users/lab/Desktop/swks/wav_player/Test_WAVreader.vhf</arg>&quot; Line <arg fmt="%d" index="2">166</arg>. Instance <arg fmt="%s" index="3">rotaryenc</arg> is unbound
+</msg>
+
+<msg type="warning" file="Simulator" num="648" delta="unknown" >&quot;<arg fmt="%s" index="1">C:/Users/lab/Desktop/swks/wav_player/Test_WAVreader.vhf</arg>&quot; Line <arg fmt="%d" index="2">173</arg>. Instance <arg fmt="%s" index="3">wavreader</arg> is unbound
+</msg>
+
+<msg type="warning" file="Simulator" num="648" delta="unknown" >&quot;<arg fmt="%s" index="1">C:/Users/lab/Desktop/swks/wav_player/Test_WAVreader.vhf</arg>&quot; Line <arg fmt="%d" index="2">209</arg>. Instance <arg fmt="%s" index="3">dacwrite</arg> is unbound
+</msg>
+
+<msg type="warning" file="Simulator" num="648" delta="unknown" >&quot;<arg fmt="%s" index="1">C:/Users/lab/Desktop/swks/wav_player/Test_WAVreader.vhf</arg>&quot; Line <arg fmt="%d" index="2">229</arg>. Instance <arg fmt="%s" index="3">lcd1x64</arg> is unbound
+</msg>
+
+</messages>
+

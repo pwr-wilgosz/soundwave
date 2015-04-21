@@ -1,0 +1,11 @@
+xst -intstyle ise -ifn "C:/Users/lab/Desktop/swks/lcd_ps/Test_LCD1x64.xst" -ofn "C:/Users/lab/Desktop/swks/lcd_ps/Test_LCD1x64.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc LCD.ucf -uc GenIO.ucf -p xc3s500e-fg320-4 Test_LCD1x64.ngc Test_LCD1x64.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Test_LCD1x64_map.ncd Test_LCD1x64.ngd Test_LCD1x64.pcf 
+par -w -intstyle ise -ol high -t 1 Test_LCD1x64_map.ncd Test_LCD1x64.ncd Test_LCD1x64.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Test_LCD1x64.twx Test_LCD1x64.ncd -o Test_LCD1x64.twr Test_LCD1x64.pcf -ucf LCD.ucf -ucf GenIO.ucf 
+bitgen -intstyle ise -f Test_LCD1x64.ut Test_LCD1x64.ncd 
+xst -intstyle ise -ifn "C:/Users/lab/Desktop/swks/lcd_ps/Test_LCD1x64.xst" -ofn "C:/Users/lab/Desktop/swks/lcd_ps/Test_LCD1x64.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc GenIO.ucf -uc LCD.ucf -p xc3s500e-fg320-4 Test_LCD1x64.ngc Test_LCD1x64.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Test_LCD1x64_map.ncd Test_LCD1x64.ngd Test_LCD1x64.pcf 
+par -w -intstyle ise -ol high -t 1 Test_LCD1x64_map.ncd Test_LCD1x64.ncd Test_LCD1x64.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Test_LCD1x64.twx Test_LCD1x64.ncd -o Test_LCD1x64.twr Test_LCD1x64.pcf -ucf GenIO.ucf -ucf LCD.ucf 

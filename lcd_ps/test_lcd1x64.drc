@@ -1,0 +1,8 @@
+Release 14.7 Drc P.20131013 (nt)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+Tue Apr 21 10:55:52 2015
+
+drc -z Test_LCD1x64.ncd Test_LCD1x64.pcf
+
+DRC detected 0 errors and 0 warnings.

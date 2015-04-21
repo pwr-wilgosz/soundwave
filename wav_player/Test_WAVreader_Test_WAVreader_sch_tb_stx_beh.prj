@@ -1,0 +1,3 @@
+vhdl isim_temp "FSM_SendSamples.vhd"
+vhdl isim_temp "Test_WAVreader.vhf"
+vhdl isim_temp "vhdl_test_branch.vhd"

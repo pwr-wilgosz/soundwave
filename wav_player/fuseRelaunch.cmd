@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -o "C:/Users/lab/Desktop/swks/wav_player/Test_WAVreader_Test_WAVreader_sch_tb_isim_beh.exe" -prj "C:/Users/lab/Desktop/swks/wav_player/Test_WAVreader_Test_WAVreader_sch_tb_beh.prj" "work.Test_WAVreader_Test_WAVreader_sch_tb" 

@@ -1,0 +1,28 @@
+Command line:
+   Test_WAVreader_Test_WAVreader_sch_tb_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  49284
+
+Tue Apr 21 09:23:22 2015
+
+
+ Elaboration Time: 0.062401 sec
+
+ Current Memory Usage: 801.722 Meg
+
+ Total Signals          : 122
+ Total Nets             : 209
+ Total Signal Drivers   : 41
+ Total Blocks           : 10
+ Total Primitive Blocks : 8
+ Total Processes        : 21
+ Total Traceable Variables  : 13
+ Total Scalar Nets and Variables : 692
+
+ Total Simulation Time: 0.078001 sec
+
+ Current Memory Usage: 801.722 Meg
+
+Tue Apr 21 09:23:37 2015
+

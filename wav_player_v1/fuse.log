@@ -1,0 +1,34 @@
+Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt\unwrapped\fuse.exe -intstyle ise -incremental -o C:/Users/lab/Desktop/swks/wav_player/Test_WAVreader_Test_WAVreader_sch_tb_isim_beh.exe -prj C:/Users/lab/Desktop/swks/wav_player/Test_WAVreader_Test_WAVreader_sch_tb_beh.prj work.Test_WAVreader_Test_WAVreader_sch_tb 
+ISim P.20131013 (signature 0x8ef4fb42)
+Number of CPUs detected in this system: 2
+Turning on mult-threading, number of parallel sub-compilation jobs: 4 
+Determining compilation order of HDL files
+Parsing VHDL file "C:/Users/lab/Desktop/swks/wav_player/FSM_SendSamples.vhd" into library work
+Parsing VHDL file "C:/Users/lab/Desktop/swks/wav_player/Test_WAVreader.vhf" into library work
+Parsing VHDL file "C:/Users/lab/Desktop/swks/wav_player/vhdl_test_branch.vhd" into library work
+Starting static elaboration
+WARNING:HDLCompiler:89 - "C:/Users/lab/Desktop/swks/wav_player/Test_WAVreader.vhf" Line 166: <rotaryenc> remains a black-box since it has no binding entity.
+WARNING:HDLCompiler:89 - "C:/Users/lab/Desktop/swks/wav_player/Test_WAVreader.vhf" Line 173: <wavreader> remains a black-box since it has no binding entity.
+WARNING:HDLCompiler:89 - "C:/Users/lab/Desktop/swks/wav_player/Test_WAVreader.vhf" Line 209: <dacwrite> remains a black-box since it has no binding entity.
+WARNING:HDLCompiler:89 - "C:/Users/lab/Desktop/swks/wav_player/Test_WAVreader.vhf" Line 229: <lcd1x64> remains a black-box since it has no binding entity.
+Completed static elaboration
+Fuse Memory Usage: 109252 KB
+Fuse CPU Usage: 358 ms
+WARNING:Simulator:648 - "C:/Users/lab/Desktop/swks/wav_player/Test_WAVreader.vhf" Line 166. Instance rotaryenc is unbound
+WARNING:Simulator:648 - "C:/Users/lab/Desktop/swks/wav_player/Test_WAVreader.vhf" Line 173. Instance wavreader is unbound
+WARNING:Simulator:648 - "C:/Users/lab/Desktop/swks/wav_player/Test_WAVreader.vhf" Line 209. Instance dacwrite is unbound
+WARNING:Simulator:648 - "C:/Users/lab/Desktop/swks/wav_player/Test_WAVreader.vhf" Line 229. Instance lcd1x64 is unbound
+Compiling package standard
+Compiling package std_logic_1164
+Compiling package numeric_std
+Compiling package vcomponents
+Compiling architecture behavioral of entity FSM_SendSamples [fsm_sendsamples_default]
+Compiling architecture buf_v of entity BUF [buf_default]
+Compiling architecture behavioral of entity Test_WAVreader [test_wavreader_default]
+Compiling architecture behavioral of entity test_wavreader_test_wavreader_sc...
+Time Resolution for simulation is 1ps.
+Waiting for 4 sub-compilation(s) to finish...
+Compiled 11 VHDL Units
+Built simulation executable C:/Users/lab/Desktop/swks/wav_player/Test_WAVreader_Test_WAVreader_sch_tb_isim_beh.exe
+Fuse Memory Usage: 124916 KB
+Fuse CPU Usage: 498 ms

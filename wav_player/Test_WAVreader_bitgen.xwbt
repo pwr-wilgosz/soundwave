@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\Users\lab\Desktop\swks\wav_player\Test_WAVreader.ncd
+OUTFILE=C:\Users\lab\Desktop\swks\wav_player\Test_WAVreader.bit
+FAMILY=Spartan3E
+PART=xc3s500e-4fg320
+WORKINGDIR=C:\Users\lab\Desktop\swks\wav_player
+LICENSE=ISE
+USER_INFO=174693031_177724690_210552578_727
