@@ -3,13 +3,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 1.00 secs
+Total REAL time to Xst completion: 0.00 secs
 Total CPU time to Xst completion: 0.12 secs
  
 --> Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 1.00 secs
+Total REAL time to Xst completion: 0.00 secs
 Total CPU time to Xst completion: 0.12 secs
  
 --> Reading design: Test_WAVreader.prj
@@ -104,7 +104,7 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 *                          HDL Compilation                              *
 =========================================================================
-Compiling vhdl file "C:/Users/lab/Desktop/swks/wav_player_v1/Test_WAVreader.vhf" in Library work.
+Compiling vhdl file "C:/Users/lab/Desktop/soundwave/wav_player_v1/Test_WAVreader.vhf" in Library work.
 Entity <test_wavreader> compiled.
 Entity <test_wavreader> (Architecture <behavioral>) compiled.
 
@@ -120,15 +120,12 @@ Analyzing hierarchy for entity <FSM_SendSamples> in library <work> (architecture
 *                            HDL Analysis                               *
 =========================================================================
 Analyzing Entity <Test_WAVreader> in library <work> (Architecture <behavioral>).
-WARNING:Xst:2211 - "C:/Users/lab/Desktop/swks/wav_player_v1/Test_WAVreader.vhf" line 193: Instantiating black box module <RotaryEnc>.
-WARNING:Xst:2211 - "C:/Users/lab/Desktop/swks/wav_player_v1/Test_WAVreader.vhf" line 200: Instantiating black box module <WAVreader>.
-WARNING:Xst:753 - "C:/Users/lab/Desktop/swks/wav_player_v1/Test_WAVreader.vhf" line 236: Unconnected output port 'SF_CE0' of component 'DACWrite'.
-WARNING:Xst:2211 - "C:/Users/lab/Desktop/swks/wav_player_v1/Test_WAVreader.vhf" line 236: Instantiating black box module <DACWrite>.
-WARNING:Xst:2211 - "C:/Users/lab/Desktop/swks/wav_player_v1/Test_WAVreader.vhf" line 256: Instantiating black box module <LCD1x64>.
-WARNING:Xst:2211 - "C:/Users/lab/Desktop/swks/wav_player_v1/Test_WAVreader.vhf" line 283: Instantiating black box module <PS2_Kbd>.
-WARNING:Xst:753 - "C:/Users/lab/Desktop/swks/wav_player_v1/Test_WAVreader.vhf" line 293: Unconnected output port 'LCD_WE' of component 'KbdDecode'.
-WARNING:Xst:753 - "C:/Users/lab/Desktop/swks/wav_player_v1/Test_WAVreader.vhf" line 293: Unconnected output port 'LCD_DnI' of component 'KbdDecode'.
-WARNING:Xst:2211 - "C:/Users/lab/Desktop/swks/wav_player_v1/Test_WAVreader.vhf" line 293: Instantiating black box module <KbdDecode>.
+WARNING:Xst:2211 - "C:/Users/lab/Desktop/soundwave/wav_player_v1/Test_WAVreader.vhf" line 182: Instantiating black box module <RotaryEnc>.
+WARNING:Xst:2211 - "C:/Users/lab/Desktop/soundwave/wav_player_v1/Test_WAVreader.vhf" line 189: Instantiating black box module <WAVreader>.
+WARNING:Xst:753 - "C:/Users/lab/Desktop/soundwave/wav_player_v1/Test_WAVreader.vhf" line 225: Unconnected output port 'SF_CE0' of component 'DACWrite'.
+WARNING:Xst:2211 - "C:/Users/lab/Desktop/soundwave/wav_player_v1/Test_WAVreader.vhf" line 225: Instantiating black box module <DACWrite>.
+WARNING:Xst:2211 - "C:/Users/lab/Desktop/soundwave/wav_player_v1/Test_WAVreader.vhf" line 245: Instantiating black box module <LCD1x64>.
+WARNING:Xst:2211 - "C:/Users/lab/Desktop/soundwave/wav_player_v1/Test_WAVreader.vhf" line 272: Instantiating black box module <PS2_Kbd>.
 Entity <Test_WAVreader> analyzed. Unit <Test_WAVreader> generated.
 
 Analyzing Entity <FSM_SendSamples> in library <work> (Architecture <behavioral>).
@@ -165,8 +162,11 @@ Unit <FSM_SendSamples> synthesized.
 
 
 Synthesizing Unit <Test_WAVreader>.
-    Related source file is "C:/Users/lab/Desktop/swks/wav_player_v1/Test_WAVreader.vhf".
-WARNING:Xst:653 - Signal <Line<63:24>> is used but never assigned. This sourceless signal will be automatically connected to value 0000000000000000000000000000000000000000.
+    Related source file is "C:/Users/lab/Desktop/soundwave/wav_player_v1/Test_WAVreader.vhf".
+WARNING:Xst:653 - Signal <Line<55:16>> is used but never assigned. This sourceless signal will be automatically connected to value 0000000000000000000000000000000000000000.
+WARNING:Xst:646 - Signal <KbdF0> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <KbdE0> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <KbdDataRdy> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 Unit <Test_WAVreader> synthesized.
 
 
@@ -305,8 +305,6 @@ Cell Usage :
 #      IBUF                        : 11
 #      IOBUF                       : 4
 #      OBUF                        : 21
-# Others                           : 1
-#      KbdDecode                   : 1
 =========================================================================
 
 Device utilization summary:
@@ -372,7 +370,7 @@ All values displayed in nanoseconds (ns)
 =========================================================================
 Timing constraint: Default period analysis for Clock 'Clk_50MHz'
   Clock period: 11.111ns (frequency: 90.004MHz)
-  Total number of paths / destination ports: 39926 / 1600
+  Total number of paths / destination ports: 39974 / 1600
 -------------------------------------------------------------------------
 Delay:               11.111ns (Levels of Logic = 7)
   Source:            XLXI_2/XLXI_1/XLXI_89/cntBytes_5 (FF)
@@ -399,7 +397,7 @@ Delay:               11.111ns (Levels of Logic = 7)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'Clk_50MHz'
-  Total number of paths / destination ports: 251 / 190
+  Total number of paths / destination ports: 203 / 183
 -------------------------------------------------------------------------
 Offset:              10.065ns (Levels of Logic = 10)
   Source:            SW_2 (PAD)
@@ -427,7 +425,7 @@ Offset:              10.065ns (Levels of Logic = 10)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'Clk_50MHz'
-  Total number of paths / destination ports: 53 / 29
+  Total number of paths / destination ports: 41 / 18
 -------------------------------------------------------------------------
 Offset:              7.731ns (Levels of Logic = 4)
   Source:            XLXI_2/XLXI_1/XLXI_86/XLXI_2/State_2 (FF)
@@ -472,11 +470,11 @@ Delay:               7.263ns (Levels of Logic = 4)
 
 
 Total REAL time to Xst completion: 10.00 secs
-Total CPU time to Xst completion: 9.63 secs
+Total CPU time to Xst completion: 10.13 secs
  
 --> 
 
-Total memory usage is 223944 kilobytes
+Total memory usage is 224012 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :   12 (   0 filtered)

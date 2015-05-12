@@ -1,5 +1,5 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Tue Apr 21 11:11:54 2015
+// Written by: Map P.20131013 on Tue May 12 08:34:41 2015
 //! **************************************************************************
 
 SCHEMATIC START;
@@ -38,6 +38,8 @@ COMP "SDC_MISO" LOCATE = SITE "A6" LEVEL 1;
 COMP "SDC_MOSI" LOCATE = SITE "F7" LEVEL 1;
 COMP "SDC_SCK" LOCATE = SITE "E7" LEVEL 1;
 COMP "FPGA_INIT_B" LOCATE = SITE "T3" LEVEL 1;
+COMP "PS2_Data" LOCATE = SITE "G13" LEVEL 1;
+COMP "PS2_Clk" LOCATE = SITE "G14" LEVEL 1;
 NET "Clk_50MHz_BUFGP/IBUFG" BEL "Clk_50MHz_BUFGP/BUFG.GCLKMUX"
         USELOCALCONNECT;
 NET "Clk_50MHz_BUFGP/IBUFG" PERIOD = 20 ns HIGH 50%;

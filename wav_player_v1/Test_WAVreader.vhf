@@ -7,11 +7,11 @@
 -- \   \   \/     Version : 14.7
 --  \   \         Application : sch2hdl
 --  /   /         Filename : Test_WAVreader.vhf
--- /___/   /\     Timestamp : 04/21/2015 12:39:54
+-- /___/   /\     Timestamp : 05/12/2015 08:34:17
 -- \   \  /  \ 
 --  \___\/\___\ 
 --
---Command: sch2hdl -intstyle ise -family spartan3e -flat -suppress -vhdl C:/Users/lab/Desktop/swks/wav_player_v1/Test_WAVreader.vhf -w C:/Users/lab/Desktop/swks/wav_player_v1/Test_WAVreader.sch
+--Command: sch2hdl -intstyle ise -family spartan3e -flat -suppress -vhdl C:/Users/lab/Desktop/soundwave/wav_player_v1/Test_WAVreader.vhf -w C:/Users/lab/Desktop/soundwave/wav_player_v1/Test_WAVreader.sch
 --Design Name: Test_WAVreader
 --Device: spartan3e
 --Purpose:
@@ -63,6 +63,9 @@ end Test_WAVreader;
 architecture BEHAVIORAL of Test_WAVreader is
    attribute BOX_TYPE   : string ;
    signal FName       : std_logic_vector (7 downto 0);
+   signal KbdDataRdy  : std_logic;
+   signal KbdE0       : std_logic;
+   signal KbdF0       : std_logic;
    signal Line        : std_logic_vector (63 downto 0);
    signal XLXN_326    : std_logic;
    signal XLXN_327    : std_logic;
@@ -77,10 +80,6 @@ architecture BEHAVIORAL of Test_WAVreader is
    signal XLXN_395    : std_logic;
    signal XLXN_396    : std_logic;
    signal XLXN_549    : std_logic_vector (15 downto 0);
-   signal XLXN_617    : std_logic_vector (7 downto 0);
-   signal XLXN_618    : std_logic;
-   signal XLXN_619    : std_logic;
-   signal XLXN_620    : std_logic;
    component RotaryEnc
       port ( ROT_A : in    std_logic; 
              ROT_B : in    std_logic; 
@@ -177,19 +176,9 @@ architecture BEHAVIORAL of Test_WAVreader is
              Clk_Sys   : in    std_logic);
    end component;
    
-   component KbdDecode
-      port ( LCD_WE     : out   std_logic; 
-             LCD_DnI    : out   std_logic; 
-             LCD_DI     : out   std_logic_vector (7 downto 0); 
-             KbdE0      : in    std_logic; 
-             KbdF0      : in    std_logic; 
-             KbdDataRdy : in    std_logic; 
-             KbdDO      : in    std_logic_vector (7 downto 0));
-   end component;
-   
 begin
    FName(7 downto 4) <= x"3";
-   XLXN_549(15 downto 0) <= x"FFF0";
+   XLXN_549(15 downto 0) <= x"0FFF";
    XLXI_1 : RotaryEnc
       port map (Clk=>Clk_50MHz,
                 ROT_A=>ROT_A,
@@ -285,19 +274,10 @@ begin
                 Clk_50MHz=>Clk_50MHz,
                 PS2_Clk=>PS2_Clk,
                 PS2_Data=>PS2_Data,
-                DO(7 downto 0)=>XLXN_617(7 downto 0),
-                DO_Rdy=>XLXN_620,
-                E0=>XLXN_618,
-                F0=>XLXN_619);
-   
-   XLXI_83 : KbdDecode
-      port map (KbdDataRdy=>XLXN_620,
-                KbdDO(7 downto 0)=>XLXN_617(7 downto 0),
-                KbdE0=>XLXN_618,
-                KbdF0=>XLXN_619,
-                LCD_DI(7 downto 0)=>Line(23 downto 16),
-                LCD_DnI=>open,
-                LCD_WE=>open);
+                DO(7 downto 0)=>Line(63 downto 56),
+                DO_Rdy=>KbdDataRdy,
+                E0=>KbdE0,
+                F0=>KbdF0);
    
 end BEHAVIORAL;
 

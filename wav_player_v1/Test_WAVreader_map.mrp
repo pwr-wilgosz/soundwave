@@ -9,33 +9,33 @@ Target Device  : xc3s500e
 Target Package : fg320
 Target Speed   : -4
 Mapper Version : spartan3e -- $Revision: 1.55 $
-Mapped Date    : Tue Apr 21 11:11:52 2015
+Mapped Date    : Tue May 12 08:34:38 2015
 
 Design Summary
 --------------
 Number of errors:      0
 Number of warnings:    1
 Logic Utilization:
-  Number of Slice Flip Flops:           717 out of   9,312    7%
-  Number of 4 input LUTs:             1,385 out of   9,312   14%
+  Number of Slice Flip Flops:           737 out of   9,312    7%
+  Number of 4 input LUTs:             1,390 out of   9,312   14%
 Logic Distribution:
-  Number of occupied Slices:            922 out of   4,656   19%
-    Number of Slices containing only related logic:     922 out of     922 100%
-    Number of Slices containing unrelated logic:          0 out of     922   0%
+  Number of occupied Slices:            936 out of   4,656   20%
+    Number of Slices containing only related logic:     936 out of     936 100%
+    Number of Slices containing unrelated logic:          0 out of     936   0%
       *See NOTES below for an explanation of the effects of unrelated logic.
-  Total Number of 4 input LUTs:       1,486 out of   9,312   15%
-    Number used as logic:             1,383
-    Number used as a route-thru:        101
+  Total Number of 4 input LUTs:       1,498 out of   9,312   16%
+    Number used as logic:             1,388
+    Number used as a route-thru:        108
     Number used as Shift registers:       2
 
   The Slice Logic Distribution report is not meaningful if the design is
   over-mapped for a non-slice resource or if Placement fails.
 
-  Number of bonded IOBs:                 35 out of     232   15%
+  Number of bonded IOBs:                 37 out of     232   15%
   Number of RAMB16s:                      1 out of      20    5%
   Number of BUFGMUXs:                     1 out of      24    4%
 
-Average Fanout of Non-Clock Nets:                3.32
+Average Fanout of Non-Clock Nets:                3.29
 
 Peak Memory Usage:  218 MB
 Total REAL time to MAP completion:  3 secs 
@@ -93,7 +93,7 @@ Section 3 - Informational
 -------------------------
 INFO:Security:54 - 'xc3s500e' is a WebPack part.
 INFO:LIT:243 - Logical network N10 has no load.
-INFO:LIT:395 - The above info message is repeated 14 more times for the
+INFO:LIT:395 - The above info message is repeated 17 more times for the
    following (max. 5 shown):
    N11,
    N12,
@@ -110,9 +110,9 @@ INFO:LIT:244 - All of the single ended outputs in this design are using slew
 
 Section 4 - Removed Logic Summary
 ---------------------------------
-  11 block(s) removed
-  51 block(s) optimized away
-  11 signal(s) removed
+  56 block(s) removed
+  49 block(s) optimized away
+  56 signal(s) removed
 
 Section 5 - Removed Logic
 -------------------------
@@ -138,6 +138,94 @@ The signal "XLXI_2/XLXI_3/DO_R<0>" is sourceless and has been removed.
 The signal "XLXI_40/genIOBUF[0].instIOBUF/O" is sourceless and has been removed.
 The signal "XLXI_40/genIOBUF[1].instIOBUF/O" is sourceless and has been removed.
 The signal "XLXI_40/genIOBUF[2].instIOBUF/O" is sourceless and has been removed.
+The signal "XLXI_82/E0" is sourceless and has been removed.
+The signal "XLXI_82/F0" is sourceless and has been removed.
+The signal "XLXI_82/DO_Rdy" is sourceless and has been removed.
+The signal "XLXI_82/ByteRdy_and0000" is sourceless and has been removed.
+ Sourceless block "XLXI_82/ByteRdy" (SFF) removed.
+  The signal "XLXI_82/ByteRdy" is sourceless and has been removed.
+   Sourceless block "XLXI_82/E0" (FF) removed.
+   Sourceless block "XLXI_82/F0" (FF) removed.
+   Sourceless block "XLXI_82/iDO_Rdy1" (ROM) removed.
+    The signal "XLXI_82/iDO_Rdy" is sourceless and has been removed.
+     Sourceless block "XLXI_82/ResDORdy/DInToggle" (FF) removed.
+      The signal "XLXI_82/ResDORdy/DInToggle" is sourceless and has been removed.
+       Sourceless block "XLXI_82/ResDORdy/qDIn" (FF) removed.
+        The signal "XLXI_82/ResDORdy/qDIn" is sourceless and has been removed.
+         Sourceless block "XLXI_82/ResDORdy/prevDIn" (FF) removed.
+          The signal "XLXI_82/ResDORdy/prevDIn" is sourceless and has been removed.
+           Sourceless block "XLXI_82/ResDORdy/Mxor_DOut_Result1" (ROM) removed.
+       Sourceless block "XLXI_82/ResDORdy/DInToggle_not00011_INV_0" (BUF) removed.
+        The signal "XLXI_82/ResDORdy/DInToggle_not0001" is sourceless and has been
+removed.
+   Sourceless block "XLXI_82/qF0_not00011" (ROM) removed.
+    The signal "XLXI_82/qF0_not0001" is sourceless and has been removed.
+     Sourceless block "XLXI_82/qF0" (FF) removed.
+      The signal "XLXI_82/qF0" is sourceless and has been removed.
+   Sourceless block "XLXI_82/qE0_not00011" (ROM) removed.
+    The signal "XLXI_82/qE0_not0001" is sourceless and has been removed.
+     Sourceless block "XLXI_82/qE0" (FF) removed.
+      The signal "XLXI_82/qE0" is sourceless and has been removed.
+The signal "XLXI_82/ByteRdy_not0001" is sourceless and has been removed.
+The signal "XLXI_82/DataF0" is sourceless and has been removed.
+The signal "XLXI_82/DataE0" is sourceless and has been removed.
+The signal "XLXI_82/Result<0>" is sourceless and has been removed.
+ Sourceless block "XLXI_82/cnt5b_0" (SFF) removed.
+  The signal "XLXI_82/cnt5b<0>" is sourceless and has been removed.
+   Sourceless block "XLXI_82/Mcount_cnt5b_xor<1>11" (ROM) removed.
+    The signal "XLXI_82/Result<1>" is sourceless and has been removed.
+     Sourceless block "XLXI_82/cnt5b_1" (SFF) removed.
+      The signal "XLXI_82/cnt5b<1>" is sourceless and has been removed.
+       Sourceless block "XLXI_82/Mcount_cnt5b_xor<2>11" (ROM) removed.
+        The signal "XLXI_82/Result<2>" is sourceless and has been removed.
+         Sourceless block "XLXI_82/cnt5b_2" (SFF) removed.
+          The signal "XLXI_82/cnt5b<2>" is sourceless and has been removed.
+           Sourceless block "XLXI_82/Mcount_cnt5b_cy<2>11" (ROM) removed.
+            The signal "XLXI_82/Mcount_cnt5b_cy<2>" is sourceless and has been removed.
+             Sourceless block "XLXI_82/Mcount_cnt5b_xor<4>11" (ROM) removed.
+              The signal "XLXI_82/Result<4>" is sourceless and has been removed.
+               Sourceless block "XLXI_82/cnt5b_4" (SFF) removed.
+                The signal "XLXI_82/cnt5b<4>" is sourceless and has been removed.
+                 Sourceless block "XLXI_82/cntMod11_or00007" (ROM) removed.
+                  The signal "XLXI_82/cntMod11_or00007/O" is sourceless and has been removed.
+           Sourceless block "XLXI_82/cntMod11_or00002" (ROM) removed.
+            The signal "XLXI_82/cntMod11_or00002" is sourceless and has been removed.
+           Sourceless block "XLXI_82/Mcount_cnt5b_xor<3>11" (ROM) removed.
+            The signal "XLXI_82/Result<3>" is sourceless and has been removed.
+             Sourceless block "XLXI_82/cnt5b_3" (SFF) removed.
+              The signal "XLXI_82/cnt5b<3>" is sourceless and has been removed.
+   Sourceless block "XLXI_82/Mcount_cnt5b_xor<0>11_INV_0" (BUF) removed.
+The signal "XLXI_82/Result<0>2" is sourceless and has been removed.
+ Sourceless block "XLXI_82/cntMod11_0" (SFF) removed.
+  The signal "XLXI_82/cntMod11<0>" is sourceless and has been removed.
+   Sourceless block "XLXI_82/Mcount_cntMod11_xor<1>11" (ROM) removed.
+    The signal "XLXI_82/Result<1>2" is sourceless and has been removed.
+     Sourceless block "XLXI_82/cntMod11_1" (SFF) removed.
+      The signal "XLXI_82/cntMod11<1>" is sourceless and has been removed.
+       Sourceless block "XLXI_82/Mcount_cntMod11_xor<2>11" (ROM) removed.
+        The signal "XLXI_82/Result<2>2" is sourceless and has been removed.
+         Sourceless block "XLXI_82/cntMod11_2" (SFF) removed.
+          The signal "XLXI_82/cntMod11<2>" is sourceless and has been removed.
+           Sourceless block "XLXI_82/Mcount_cntMod11_xor<3>11" (ROM) removed.
+            The signal "XLXI_82/Result<3>2" is sourceless and has been removed.
+             Sourceless block "XLXI_82/cntMod11_3" (SFF) removed.
+              The signal "XLXI_82/cntMod11<3>" is sourceless and has been removed.
+               Sourceless block "XLXI_82/ByteRdy_cmp_eq00001" (ROM) removed.
+                The signal "XLXI_82/ByteRdy_cmp_eq0000" is sourceless and has been removed.
+                 Sourceless block "XLXI_82/cntMod11_or000016" (ROM) removed.
+                  The signal "XLXI_82/cntMod11_or0000" is sourceless and has been removed.
+   Sourceless block "XLXI_82/Mcount_cntMod11_xor<0>11_INV_0" (BUF) removed.
+The signal "XLXI_82/N0" is sourceless and has been removed.
+ Sourceless block "XLXI_82/DataF0_cmp_eq00001" (ROM) removed.
+ Sourceless block "XLXI_82/DataE0_cmp_eq00002" (ROM) removed.
+The signal "XLXI_82/Mxor_ByteRdy_xor0000_xo<4>" is sourceless and has been
+removed.
+ Sourceless block "XLXI_82/ByteRdy_and0000" (ROM) removed.
+The signal "XLXI_82/Mxor_ByteRdy_xor0000_xo<5>" is sourceless and has been
+removed.
+The signal "XLXI_82/N6" is sourceless and has been removed.
+The signal "XLXI_82/DataE0_cmp_eq00001_SW0/O" is sourceless and has been
+removed.
 Unused block "XLXI_2/XLXI_3/DO_L_0" (SFF) removed.
 Unused block "XLXI_2/XLXI_3/DO_L_1" (SFF) removed.
 Unused block "XLXI_2/XLXI_3/DO_L_2" (SFF) removed.
@@ -149,6 +237,12 @@ Unused block "XLXI_2/XLXI_3/DO_R_3" (SFF) removed.
 Unused block "XLXI_40/genIOBUF[0].instIOBUF/IBUF" (BUF) removed.
 Unused block "XLXI_40/genIOBUF[1].instIOBUF/IBUF" (BUF) removed.
 Unused block "XLXI_40/genIOBUF[2].instIOBUF/IBUF" (BUF) removed.
+Unused block "XLXI_82/ByteRdy_and0000_SW0_SW0" (ROM) removed.
+Unused block "XLXI_82/ByteRdy_not00011" (ROM) removed.
+Unused block "XLXI_82/DataE0_cmp_eq00001" (ROM) removed.
+Unused block "XLXI_82/DataE0_cmp_eq00001_SW0" (ROM) removed.
+Unused block "XLXI_82/Mxor_ByteRdy_xor0000_xo<4>1" (ROM) removed.
+Unused block "XLXI_82/Mxor_ByteRdy_xor0000_xo<5>1" (ROM) removed.
 
 Optimized Block(s):
 TYPE 		BLOCK
@@ -173,9 +267,9 @@ FDE 		XLXI_31/CmdSys_3
 GND 		XLXI_31/XST_GND
 VCC 		XLXI_31/XST_VCC
 LUT3 		XLXI_40/Mmux_Blank_mux0000_5
-   optimized to 1
+   optimized to 0
 LUT3 		XLXI_40/Mmux_Blank_mux0000_6
-   optimized to 1
+   optimized to 0
 LUT3 		XLXI_40/Mmux_Blank_mux0000_61
    optimized to 1
 LUT3 		XLXI_40/Mmux_Blank_mux0000_62
@@ -185,17 +279,9 @@ LUT3 		XLXI_40/Mmux_Blank_mux0000_7
 LUT3 		XLXI_40/Mmux_Blank_mux0000_71
    optimized to 1
 LUT3 		XLXI_40/Mmux_Blank_mux0000_72
-   optimized to 0
+   optimized to 1
 LUT3 		XLXI_40/Mmux_Blank_mux0000_8
-   optimized to 0
-LUT3 		XLXI_40/Mmux_Digit_5
-   optimized to 0
-LUT3 		XLXI_40/Mmux_Digit_51
-   optimized to 0
-LUT3 		XLXI_40/Mmux_Digit_52
-   optimized to 0
-LUT3 		XLXI_40/Mmux_Digit_53
-   optimized to 0
+   optimized to 1
 LUT3 		XLXI_40/Mmux_Digit_6
    optimized to 0
 LUT3 		XLXI_40/Mmux_Digit_61
@@ -238,6 +324,8 @@ LUT3 		XLXI_40/Mmux_Digit_79
    optimized to 0
 GND 		XLXI_40/XST_GND
 VCC 		XLXI_40/XST_VCC
+GND 		XLXI_82/XST_GND
+VCC 		XLXI_82/XST_VCC
 GND 		XST_GND
 VCC 		XST_VCC
 
@@ -271,6 +359,8 @@ Section 6 - IOB Properties
 | LED<0>                             | IOB              | OUTPUT    | LVTTL                |       | 4        | SLOW |              |          | 0 / 0    |
 | LED<1>                             | IOB              | OUTPUT    | LVTTL                |       | 4        | SLOW |              |          | 0 / 0    |
 | LED<2>                             | IOB              | OUTPUT    | LVTTL                |       | 4        | SLOW |              |          | 0 / 0    |
+| PS2_Clk                            | IBUF             | INPUT     | LVCMOS33             |       |          |      |              |          | 0 / 0    |
+| PS2_Data                           | IBUF             | INPUT     | LVCMOS33             |       |          |      |              |          | 0 / 0    |
 | ROT_A                              | IBUF             | INPUT     | LVTTL                |       |          |      |              | PULLUP   | 0 / 0    |
 | ROT_B                              | IBUF             | INPUT     | LVTTL                |       |          |      |              | PULLUP   | 0 / 0    |
 | SDC_MISO                           | IBUF             | INPUT     | LVTTL                |       |          |      |              |          | 0 / 0    |

@@ -6,9 +6,7 @@
         <trait edittrait="all:0" />
     </attr>
     <netlist>
-        <signal name="XLXN_557" />
         <signal name="XLXN_327" />
-        <signal name="XLXN_559" />
         <signal name="XLXN_383" />
         <signal name="XLXN_388" />
         <signal name="XLXN_389(3:0)" />
@@ -24,10 +22,6 @@
         <signal name="SPI_MISO" />
         <signal name="DAC_CS" />
         <signal name="DAC_CLR" />
-        <signal name="XLXN_575" />
-        <signal name="XLXN_576" />
-        <signal name="XLXN_577" />
-        <signal name="XLXN_578" />
         <signal name="Clk_50MHz" />
         <signal name="Line(63:0)" />
         <signal name="Line(15:0)" />
@@ -60,22 +54,15 @@
         <signal name="SDC_SCK" />
         <signal name="SDC_MOSI" />
         <signal name="SDC_MISO" />
-        <signal name="XLXN_611" />
-        <signal name="XLXN_612" />
         <signal name="BTN_SOUTH" />
-        <signal name="XLXN_614" />
         <signal name="XLXN_395" />
         <signal name="XLXN_326" />
-        <signal name="KbdDO(7:0)" />
         <signal name="KbdE0" />
         <signal name="KbdF0" />
         <signal name="KbdDataRdy" />
-        <signal name="XLXN_621" />
-        <signal name="XLXN_622" />
         <signal name="PS2_Clk" />
         <signal name="PS2_Data" />
-        <signal name="Line(23:16)" />
-        <signal name="XLXN_627" />
+        <signal name="Line(63:56)" />
         <port polarity="Output" name="SPI_SS_B" />
         <port polarity="Output" name="AMP_CS" />
         <port polarity="Output" name="AD_CONV" />
@@ -234,19 +221,6 @@
             <rect width="256" x="64" y="-256" height="256" />
             <line x2="0" y1="-32" y2="-32" x1="64" />
         </blockdef>
-        <blockdef name="KbdDecode">
-            <timestamp>2008-9-19T10:21:42</timestamp>
-            <rect width="288" x="32" y="-256" height="256" />
-            <line x2="384" y1="-224" y2="-224" x1="320" />
-            <line x2="384" y1="-160" y2="-160" x1="320" />
-            <rect width="64" x="320" y="-108" height="24" />
-            <line x2="384" y1="-96" y2="-96" x1="320" />
-            <line x2="-32" y1="-160" y2="-160" x1="32" />
-            <line x2="-32" y1="-96" y2="-96" x1="32" />
-            <line x2="-32" y1="-32" y2="-32" x1="32" />
-            <rect width="64" x="-32" y="-236" height="24" />
-            <line x2="-32" y1="-224" y2="-224" x1="32" />
-        </blockdef>
         <block symbolname="FSM_SendSamples" name="XLXI_30">
             <blockpin signalname="XLXN_396" name="DWr_Busy" />
             <blockpin signalname="XLXN_377" name="SampRdy" />
@@ -282,7 +256,7 @@
             <blockpin signalname="Clk_50MHz" name="Clk_Sys" />
         </block>
         <block symbolname="constant" name="XLXI_59">
-            <attr value="FFF0" name="CValue">
+            <attr value="0FFF" name="CValue">
                 <trait delete="all:1 sym:0" />
                 <trait editname="all:1 sch:0" />
                 <trait valuetype="BitVector 32 Hexadecimal" />
@@ -360,17 +334,8 @@
             <blockpin signalname="KbdE0" name="E0" />
             <blockpin signalname="KbdF0" name="F0" />
             <blockpin signalname="KbdDataRdy" name="DO_Rdy" />
-            <blockpin signalname="KbdDO(7:0)" name="DO(7:0)" />
+            <blockpin signalname="Line(63:56)" name="DO(7:0)" />
             <blockpin signalname="Clk_50MHz" name="Clk_Sys" />
-        </block>
-        <block symbolname="KbdDecode" name="XLXI_83">
-            <blockpin name="LCD_WE" />
-            <blockpin name="LCD_DnI" />
-            <blockpin signalname="Line(23:16)" name="LCD_DI(7:0)" />
-            <blockpin signalname="KbdE0" name="KbdE0" />
-            <blockpin signalname="KbdF0" name="KbdF0" />
-            <blockpin signalname="KbdDataRdy" name="KbdDataRdy" />
-            <blockpin signalname="KbdDO(7:0)" name="KbdDO(7:0)" />
         </block>
     </netlist>
     <sheet sheetnum="1" width="3520" height="2720">
@@ -383,9 +348,8 @@
         </instance>
         <branch name="XLXN_383">
             <wire x2="1792" y1="1696" y2="1696" x1="1536" />
-            <wire x2="1808" y1="1440" y2="1440" x1="1792" />
-            <wire x2="1824" y1="1440" y2="1440" x1="1808" />
             <wire x2="1792" y1="1440" y2="1696" x1="1792" />
+            <wire x2="1824" y1="1440" y2="1440" x1="1792" />
         </branch>
         <branch name="XLXN_388">
             <wire x2="2336" y1="1280" y2="1280" x1="2272" />
@@ -463,7 +427,8 @@
         </branch>
         <branch name="Line(63:0)">
             <attrtext style="alignment:SOFT-BCENTER" attrname="Name" x="2160" y="2336" type="branch" />
-            <wire x2="2080" y1="2192" y2="2240" x1="2080" />
+            <wire x2="2080" y1="2192" y2="2224" x1="2080" />
+            <wire x2="2080" y1="2224" y2="2240" x1="2080" />
             <wire x2="2080" y1="2240" y2="2304" x1="2080" />
             <wire x2="2080" y1="2304" y2="2336" x1="2080" />
             <wire x2="2160" y1="2336" y2="2336" x1="2080" />
@@ -577,60 +542,49 @@
         <branch name="LED(2:0)">
             <wire x2="1696" y1="1760" y2="1760" x1="1536" />
             <wire x2="1696" y1="1760" y2="2176" x1="1696" />
-            <wire x2="2944" y1="2176" y2="2176" x1="1696" />
-            <wire x2="2960" y1="2176" y2="2176" x1="2944" />
+            <wire x2="2960" y1="2176" y2="2176" x1="1696" />
         </branch>
         <branch name="LED5">
             <wire x2="1632" y1="1568" y2="1568" x1="1536" />
             <wire x2="1632" y1="1568" y2="2144" x1="1632" />
-            <wire x2="2944" y1="2144" y2="2144" x1="1632" />
-            <wire x2="2960" y1="2144" y2="2144" x1="2944" />
+            <wire x2="2960" y1="2144" y2="2144" x1="1632" />
         </branch>
         <branch name="LED6">
             <wire x2="1600" y1="1504" y2="1504" x1="1536" />
             <wire x2="1600" y1="1504" y2="2112" x1="1600" />
-            <wire x2="2944" y1="2112" y2="2112" x1="1600" />
-            <wire x2="2960" y1="2112" y2="2112" x1="2944" />
+            <wire x2="2960" y1="2112" y2="2112" x1="1600" />
         </branch>
         <branch name="LED7">
             <wire x2="1568" y1="1440" y2="1440" x1="1536" />
             <wire x2="1568" y1="1440" y2="2080" x1="1568" />
-            <wire x2="2944" y1="2080" y2="2080" x1="1568" />
-            <wire x2="2960" y1="2080" y2="2080" x1="2944" />
+            <wire x2="2960" y1="2080" y2="2080" x1="1568" />
         </branch>
         <branch name="XLXN_379(15:0)">
             <wire x2="1584" y1="1344" y2="1344" x1="1536" />
             <wire x2="1584" y1="1344" y2="1376" x1="1584" />
-            <wire x2="1808" y1="1376" y2="1376" x1="1584" />
-            <wire x2="1824" y1="1376" y2="1376" x1="1808" />
+            <wire x2="1824" y1="1376" y2="1376" x1="1584" />
         </branch>
         <branch name="XLXN_378(15:0)">
             <wire x2="1648" y1="1280" y2="1280" x1="1536" />
             <wire x2="1648" y1="1280" y2="1312" x1="1648" />
-            <wire x2="1808" y1="1312" y2="1312" x1="1648" />
-            <wire x2="1824" y1="1312" y2="1312" x1="1808" />
+            <wire x2="1824" y1="1312" y2="1312" x1="1648" />
         </branch>
         <branch name="XLXN_377">
             <wire x2="1696" y1="1216" y2="1216" x1="1536" />
             <wire x2="1696" y1="1216" y2="1248" x1="1696" />
-            <wire x2="1808" y1="1248" y2="1248" x1="1696" />
-            <wire x2="1824" y1="1248" y2="1248" x1="1808" />
+            <wire x2="1824" y1="1248" y2="1248" x1="1696" />
         </branch>
         <branch name="SDC_SS">
-            <wire x2="2944" y1="1120" y2="1120" x1="1536" />
-            <wire x2="2960" y1="1120" y2="1120" x1="2944" />
+            <wire x2="2960" y1="1120" y2="1120" x1="1536" />
         </branch>
         <branch name="SDC_SCK">
-            <wire x2="2944" y1="1056" y2="1056" x1="1536" />
-            <wire x2="2960" y1="1056" y2="1056" x1="2944" />
+            <wire x2="2960" y1="1056" y2="1056" x1="1536" />
         </branch>
         <branch name="SDC_MOSI">
-            <wire x2="2944" y1="992" y2="992" x1="1536" />
-            <wire x2="2960" y1="992" y2="992" x1="2944" />
+            <wire x2="2960" y1="992" y2="992" x1="1536" />
         </branch>
         <branch name="SDC_MISO">
-            <wire x2="2944" y1="928" y2="928" x1="1536" />
-            <wire x2="2960" y1="928" y2="928" x1="2944" />
+            <wire x2="2960" y1="928" y2="928" x1="1536" />
         </branch>
         <branch name="BTN_SOUTH">
             <wire x2="1072" y1="2528" y2="2528" x1="432" />
@@ -649,8 +603,7 @@
             <wire x2="2304" y1="784" y2="1600" x1="2304" />
             <wire x2="976" y1="784" y2="1216" x1="976" />
             <wire x2="1104" y1="1216" y2="1216" x1="976" />
-            <wire x2="2288" y1="1600" y2="1600" x1="2272" />
-            <wire x2="2304" y1="1600" y2="1600" x1="2288" />
+            <wire x2="2304" y1="1600" y2="1600" x1="2272" />
         </branch>
         <instance x="1104" y="1664" name="XLXI_2" orien="R0">
         </instance>
@@ -693,11 +646,6 @@
         <iomarker fontsize="28" x="432" y="1392" name="ROT_B" orien="R180" />
         <instance x="336" y="496" name="XLXI_82" orien="R0">
         </instance>
-        <instance x="976" y="496" name="XLXI_83" orien="R0">
-        </instance>
-        <branch name="KbdDO(7:0)">
-            <wire x2="944" y1="272" y2="272" x1="720" />
-        </branch>
         <branch name="KbdE0">
             <wire x2="944" y1="336" y2="336" x1="720" />
         </branch>
@@ -711,17 +659,15 @@
             <wire x2="336" y1="272" y2="272" x1="224" />
         </branch>
         <branch name="PS2_Data">
-            <wire x2="320" y1="336" y2="336" x1="224" />
-            <wire x2="336" y1="336" y2="336" x1="320" />
+            <wire x2="336" y1="336" y2="336" x1="224" />
         </branch>
         <iomarker fontsize="28" x="224" y="272" name="PS2_Clk" orien="R180" />
         <iomarker fontsize="28" x="224" y="336" name="PS2_Data" orien="R180" />
-        <branch name="Line(23:16)">
-            <wire x2="1776" y1="400" y2="400" x1="1360" />
-            <wire x2="1776" y1="400" y2="2224" x1="1776" />
-            <wire x2="1776" y1="2224" y2="2240" x1="1776" />
-            <wire x2="1984" y1="2240" y2="2240" x1="1776" />
+        <bustap x2="1984" y1="2224" y2="2224" x1="2080" />
+        <branch name="Line(63:56)">
+            <wire x2="1776" y1="272" y2="272" x1="720" />
+            <wire x2="1776" y1="272" y2="2224" x1="1776" />
+            <wire x2="1984" y1="2224" y2="2224" x1="1776" />
         </branch>
-        <bustap x2="1984" y1="2240" y2="2240" x1="2080" />
     </sheet>
 </drawing>
