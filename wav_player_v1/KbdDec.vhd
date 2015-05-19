@@ -3,34 +3,36 @@ use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.STD_LOGIC_ARITH.ALL;
 use IEEE.STD_LOGIC_UNSIGNED.ALL;
 
-entity KbdDecode is
-    Port ( KbdDO : in  STD_LOGIC_VECTOR( 7 downto 0 ));
-end KbdDecode;
+entity KbdDec is
+    Port ( CODE : in  STD_LOGIC_VECTOR (7 downto 0);
+           DEC : out  STD_LOGIC_VECTOR (7 downto 0));
+end KbdDec;
 
-architecture RTL of KbdDecode is
+architecture RTL of KbdDec is
 begin
 
-  process( KbdDO )
+  process( CODE )
   begin
-    case KbdDO is
+    case CODE is
 
       when "100" & X"45" => -- "0"
-        LCD_DI <= X"30";
+        DEC <= X"30";
         
       when "100" & X"16" => -- "1"
-        LCD_DI <= X"31";
+        DEC <= X"31";
         
       when "101" & X"6C" => -- Home
-        LCD_DI <= X"80";  -- LCD Home1
+        DEC <= X"80";  -- LCD Home1
         
       when "100" & X"5A" => -- Enter
-        LCD_DI <= X"C0";  -- LCD Home2
+        DEC <= X"C0";  -- LCD Home2
         
       when others =>
-        LCD_DI <= "--------";
+        DEC <= "--------";
         
     end case;
   end process;
 
 end RTL;
+
 

@@ -4,8 +4,8 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 C:\Xilinx\14.7\ISE_DS\ISE\bin\nt\unwrapped\trce.exe -intstyle ise -v 3 -s 4 -n
 3 -fastpaths -xml Test_WAVreader.twx Test_WAVreader.ncd -o Test_WAVreader.twr
-Test_WAVreader.pcf -ucf GenIO.ucf -ucf PS2_USB_SDC.ucf -ucf ADC_DAC.ucf -ucf
-LCD.ucf
+Test_WAVreader.pcf -ucf LCD.ucf -ucf GenIO.ucf -ucf PS2_USB_SDC.ucf -ucf
+ADC_DAC.ucf
 
 Design file:              Test_WAVreader.ncd
 Physical constraint file: Test_WAVreader.pcf
@@ -565,14 +565,14 @@ Design statistics:
 ------------------------------------Footnotes-----------------------------------
 1)  The minimum period statistic assumes all single cycle delays.
 
-Analysis completed Tue May 12 08:35:07 2015 
+Analysis completed Tue May 19 11:55:15 2015 
 --------------------------------------------------------------------------------
 
 Trace Settings:
 -------------------------
 Trace Settings 
 
-Peak Memory Usage: 129 MB
+Peak Memory Usage: 132 MB
 
 
 

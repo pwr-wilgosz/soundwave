@@ -7,11 +7,11 @@
 -- \   \   \/     Version : 14.7
 --  \   \         Application : sch2hdl
 --  /   /         Filename : Test_WAVreader.vhf
--- /___/   /\     Timestamp : 05/12/2015 08:34:17
+-- /___/   /\     Timestamp : 05/19/2015 11:54:26
 -- \   \  /  \ 
 --  \___\/\___\ 
 --
---Command: sch2hdl -intstyle ise -family spartan3e -flat -suppress -vhdl C:/Users/lab/Desktop/soundwave/wav_player_v1/Test_WAVreader.vhf -w C:/Users/lab/Desktop/soundwave/wav_player_v1/Test_WAVreader.sch
+--Command: sch2hdl -intstyle ise -family spartan3e -flat -suppress -vhdl C:/Users/lab/Desktop/swilgosz/wav_player_v1/Test_WAVreader.vhf -w C:/Users/lab/Desktop/swilgosz/wav_player_v1/Test_WAVreader.sch
 --Design Name: Test_WAVreader
 --Device: spartan3e
 --Purpose:
@@ -63,9 +63,6 @@ end Test_WAVreader;
 architecture BEHAVIORAL of Test_WAVreader is
    attribute BOX_TYPE   : string ;
    signal FName       : std_logic_vector (7 downto 0);
-   signal KbdDataRdy  : std_logic;
-   signal KbdE0       : std_logic;
-   signal KbdF0       : std_logic;
    signal Line        : std_logic_vector (63 downto 0);
    signal XLXN_326    : std_logic;
    signal XLXN_327    : std_logic;
@@ -178,7 +175,7 @@ architecture BEHAVIORAL of Test_WAVreader is
    
 begin
    FName(7 downto 4) <= x"3";
-   XLXN_549(15 downto 0) <= x"0FFF";
+   XLXN_549(15 downto 0) <= x"3FFF";
    XLXI_1 : RotaryEnc
       port map (Clk=>Clk_50MHz,
                 ROT_A=>ROT_A,
@@ -275,9 +272,9 @@ begin
                 PS2_Clk=>PS2_Clk,
                 PS2_Data=>PS2_Data,
                 DO(7 downto 0)=>Line(63 downto 56),
-                DO_Rdy=>KbdDataRdy,
-                E0=>KbdE0,
-                F0=>KbdF0);
+                DO_Rdy=>open,
+                E0=>open,
+                F0=>open);
    
 end BEHAVIORAL;
 

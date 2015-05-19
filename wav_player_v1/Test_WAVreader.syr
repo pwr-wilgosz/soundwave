@@ -104,7 +104,7 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 *                          HDL Compilation                              *
 =========================================================================
-Compiling vhdl file "C:/Users/lab/Desktop/soundwave/wav_player_v1/Test_WAVreader.vhf" in Library work.
+Compiling vhdl file "C:/Users/lab/Desktop/swilgosz/wav_player_v1/Test_WAVreader.vhf" in Library work.
 Entity <test_wavreader> compiled.
 Entity <test_wavreader> (Architecture <behavioral>) compiled.
 
@@ -120,12 +120,15 @@ Analyzing hierarchy for entity <FSM_SendSamples> in library <work> (architecture
 *                            HDL Analysis                               *
 =========================================================================
 Analyzing Entity <Test_WAVreader> in library <work> (Architecture <behavioral>).
-WARNING:Xst:2211 - "C:/Users/lab/Desktop/soundwave/wav_player_v1/Test_WAVreader.vhf" line 182: Instantiating black box module <RotaryEnc>.
-WARNING:Xst:2211 - "C:/Users/lab/Desktop/soundwave/wav_player_v1/Test_WAVreader.vhf" line 189: Instantiating black box module <WAVreader>.
-WARNING:Xst:753 - "C:/Users/lab/Desktop/soundwave/wav_player_v1/Test_WAVreader.vhf" line 225: Unconnected output port 'SF_CE0' of component 'DACWrite'.
-WARNING:Xst:2211 - "C:/Users/lab/Desktop/soundwave/wav_player_v1/Test_WAVreader.vhf" line 225: Instantiating black box module <DACWrite>.
-WARNING:Xst:2211 - "C:/Users/lab/Desktop/soundwave/wav_player_v1/Test_WAVreader.vhf" line 245: Instantiating black box module <LCD1x64>.
-WARNING:Xst:2211 - "C:/Users/lab/Desktop/soundwave/wav_player_v1/Test_WAVreader.vhf" line 272: Instantiating black box module <PS2_Kbd>.
+WARNING:Xst:2211 - "C:/Users/lab/Desktop/swilgosz/wav_player_v1/Test_WAVreader.vhf" line 179: Instantiating black box module <RotaryEnc>.
+WARNING:Xst:2211 - "C:/Users/lab/Desktop/swilgosz/wav_player_v1/Test_WAVreader.vhf" line 186: Instantiating black box module <WAVreader>.
+WARNING:Xst:753 - "C:/Users/lab/Desktop/swilgosz/wav_player_v1/Test_WAVreader.vhf" line 222: Unconnected output port 'SF_CE0' of component 'DACWrite'.
+WARNING:Xst:2211 - "C:/Users/lab/Desktop/swilgosz/wav_player_v1/Test_WAVreader.vhf" line 222: Instantiating black box module <DACWrite>.
+WARNING:Xst:2211 - "C:/Users/lab/Desktop/swilgosz/wav_player_v1/Test_WAVreader.vhf" line 242: Instantiating black box module <LCD1x64>.
+WARNING:Xst:753 - "C:/Users/lab/Desktop/swilgosz/wav_player_v1/Test_WAVreader.vhf" line 269: Unconnected output port 'E0' of component 'PS2_Kbd'.
+WARNING:Xst:753 - "C:/Users/lab/Desktop/swilgosz/wav_player_v1/Test_WAVreader.vhf" line 269: Unconnected output port 'F0' of component 'PS2_Kbd'.
+WARNING:Xst:753 - "C:/Users/lab/Desktop/swilgosz/wav_player_v1/Test_WAVreader.vhf" line 269: Unconnected output port 'DO_Rdy' of component 'PS2_Kbd'.
+WARNING:Xst:2211 - "C:/Users/lab/Desktop/swilgosz/wav_player_v1/Test_WAVreader.vhf" line 269: Instantiating black box module <PS2_Kbd>.
 Entity <Test_WAVreader> analyzed. Unit <Test_WAVreader> generated.
 
 Analyzing Entity <FSM_SendSamples> in library <work> (Architecture <behavioral>).
@@ -162,11 +165,8 @@ Unit <FSM_SendSamples> synthesized.
 
 
 Synthesizing Unit <Test_WAVreader>.
-    Related source file is "C:/Users/lab/Desktop/soundwave/wav_player_v1/Test_WAVreader.vhf".
+    Related source file is "C:/Users/lab/Desktop/swilgosz/wav_player_v1/Test_WAVreader.vhf".
 WARNING:Xst:653 - Signal <Line<55:16>> is used but never assigned. This sourceless signal will be automatically connected to value 0000000000000000000000000000000000000000.
-WARNING:Xst:646 - Signal <KbdF0> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:646 - Signal <KbdE0> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:646 - Signal <KbdDataRdy> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 Unit <Test_WAVreader> synthesized.
 
 
@@ -469,12 +469,12 @@ Delay:               7.263ns (Levels of Logic = 4)
 =========================================================================
 
 
-Total REAL time to Xst completion: 10.00 secs
-Total CPU time to Xst completion: 10.13 secs
+Total REAL time to Xst completion: 9.00 secs
+Total CPU time to Xst completion: 9.42 secs
  
 --> 
 
-Total memory usage is 224012 kilobytes
+Total memory usage is 228532 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :   12 (   0 filtered)

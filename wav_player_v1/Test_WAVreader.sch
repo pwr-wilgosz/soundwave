@@ -57,12 +57,11 @@
         <signal name="BTN_SOUTH" />
         <signal name="XLXN_395" />
         <signal name="XLXN_326" />
-        <signal name="KbdE0" />
-        <signal name="KbdF0" />
-        <signal name="KbdDataRdy" />
         <signal name="PS2_Clk" />
         <signal name="PS2_Data" />
         <signal name="Line(63:56)" />
+        <signal name="XLXN_552" />
+        <signal name="XLXN_550(7:0)" />
         <port polarity="Output" name="SPI_SS_B" />
         <port polarity="Output" name="AMP_CS" />
         <port polarity="Output" name="AD_CONV" />
@@ -256,7 +255,7 @@
             <blockpin signalname="Clk_50MHz" name="Clk_Sys" />
         </block>
         <block symbolname="constant" name="XLXI_59">
-            <attr value="0FFF" name="CValue">
+            <attr value="3FFF" name="CValue">
                 <trait delete="all:1 sym:0" />
                 <trait editname="all:1 sch:0" />
                 <trait valuetype="BitVector 32 Hexadecimal" />
@@ -331,9 +330,9 @@
             <blockpin signalname="PS2_Clk" name="PS2_Clk" />
             <blockpin signalname="PS2_Data" name="PS2_Data" />
             <blockpin signalname="Clk_50MHz" name="Clk_50MHz" />
-            <blockpin signalname="KbdE0" name="E0" />
-            <blockpin signalname="KbdF0" name="F0" />
-            <blockpin signalname="KbdDataRdy" name="DO_Rdy" />
+            <blockpin name="E0" />
+            <blockpin name="F0" />
+            <blockpin name="DO_Rdy" />
             <blockpin signalname="Line(63:56)" name="DO(7:0)" />
             <blockpin signalname="Clk_50MHz" name="Clk_Sys" />
         </block>
@@ -428,8 +427,7 @@
         <branch name="Line(63:0)">
             <attrtext style="alignment:SOFT-BCENTER" attrname="Name" x="2160" y="2336" type="branch" />
             <wire x2="2080" y1="2192" y2="2224" x1="2080" />
-            <wire x2="2080" y1="2224" y2="2240" x1="2080" />
-            <wire x2="2080" y1="2240" y2="2304" x1="2080" />
+            <wire x2="2080" y1="2224" y2="2304" x1="2080" />
             <wire x2="2080" y1="2304" y2="2336" x1="2080" />
             <wire x2="2160" y1="2336" y2="2336" x1="2080" />
             <wire x2="2352" y1="2336" y2="2336" x1="2160" />
@@ -646,15 +644,6 @@
         <iomarker fontsize="28" x="432" y="1392" name="ROT_B" orien="R180" />
         <instance x="336" y="496" name="XLXI_82" orien="R0">
         </instance>
-        <branch name="KbdE0">
-            <wire x2="944" y1="336" y2="336" x1="720" />
-        </branch>
-        <branch name="KbdF0">
-            <wire x2="944" y1="400" y2="400" x1="720" />
-        </branch>
-        <branch name="KbdDataRdy">
-            <wire x2="944" y1="464" y2="464" x1="720" />
-        </branch>
         <branch name="PS2_Clk">
             <wire x2="336" y1="272" y2="272" x1="224" />
         </branch>
@@ -665,9 +654,15 @@
         <iomarker fontsize="28" x="224" y="336" name="PS2_Data" orien="R180" />
         <bustap x2="1984" y1="2224" y2="2224" x1="2080" />
         <branch name="Line(63:56)">
-            <wire x2="1776" y1="272" y2="272" x1="720" />
-            <wire x2="1776" y1="272" y2="2224" x1="1776" />
-            <wire x2="1984" y1="2224" y2="2224" x1="1776" />
+            <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="1056" y="560" type="branch" />
+            <wire x2="1040" y1="272" y2="272" x1="720" />
+            <wire x2="1456" y1="272" y2="272" x1="1040" />
+            <wire x2="1456" y1="272" y2="400" x1="1456" />
+            <wire x2="1648" y1="400" y2="400" x1="1456" />
+            <wire x2="1648" y1="400" y2="560" x1="1648" />
+            <wire x2="1648" y1="560" y2="560" x1="1056" />
+            <wire x2="1056" y1="560" y2="2224" x1="1056" />
+            <wire x2="1984" y1="2224" y2="2224" x1="1056" />
         </branch>
     </sheet>
 </drawing>
