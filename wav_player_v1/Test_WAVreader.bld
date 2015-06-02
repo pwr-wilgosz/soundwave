@@ -47,7 +47,7 @@ NGDBUILD Design Results Summary:
   Number of errors:     0
   Number of warnings:   4
 
-Total memory usage is 123092 kilobytes
+Total memory usage is 123476 kilobytes
 
 Writing NGD file "Test_WAVreader.ngd" ...
 Total REAL time to NGDBUILD completion:  3 sec

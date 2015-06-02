@@ -3,13 +3,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 1.00 secs
+Total REAL time to Xst completion: 0.00 secs
 Total CPU time to Xst completion: 0.12 secs
  
 --> Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 1.00 secs
+Total REAL time to Xst completion: 0.00 secs
 Total CPU time to Xst completion: 0.12 secs
  
 --> Reading design: Test_WAVreader.prj
@@ -105,8 +105,8 @@ Slice Utilization Ratio Delta      : 5
 *                          HDL Compilation                              *
 =========================================================================
 Compiling vhdl file "C:/Users/lab/Desktop/swilgosz/wav_player_v1/KbdDec.vhd" in Library work.
-Entity <KbdDec> compiled.
-Entity <KbdDec> (Architecture <RTL>) compiled.
+Entity <kbddec> compiled.
+Entity <kbddec> (Architecture <rtl>) compiled.
 Compiling vhdl file "C:/Users/lab/Desktop/swilgosz/wav_player_v1/Test_WAVreader.vhf" in Library work.
 Entity <test_wavreader> compiled.
 Entity <test_wavreader> (Architecture <behavioral>) compiled.
@@ -118,7 +118,7 @@ Analyzing hierarchy for entity <Test_WAVreader> in library <work> (architecture 
 
 Analyzing hierarchy for entity <FSM_SendSamples> in library <work> (architecture <behavioral>).
 
-Analyzing hierarchy for entity <KbdDec> in library <work> (architecture <RTL>).
+Analyzing hierarchy for entity <KbdDec> in library <work> (architecture <rtl>).
 
 
 =========================================================================
@@ -132,12 +132,13 @@ WARNING:Xst:2211 - "C:/Users/lab/Desktop/swilgosz/wav_player_v1/Test_WAVreader.v
 WARNING:Xst:753 - "C:/Users/lab/Desktop/swilgosz/wav_player_v1/Test_WAVreader.vhf" line 230: Unconnected output port 'E0' of component 'PS2_Kbd'.
 WARNING:Xst:753 - "C:/Users/lab/Desktop/swilgosz/wav_player_v1/Test_WAVreader.vhf" line 230: Unconnected output port 'F0' of component 'PS2_Kbd'.
 WARNING:Xst:2211 - "C:/Users/lab/Desktop/swilgosz/wav_player_v1/Test_WAVreader.vhf" line 230: Instantiating black box module <PS2_Kbd>.
+WARNING:Xst:752 - "C:/Users/lab/Desktop/swilgosz/wav_player_v1/Test_WAVreader.vhf" line 240: Unconnected input port 'Keydown' of component 'KbdDec' is tied to default value.
 Entity <Test_WAVreader> analyzed. Unit <Test_WAVreader> generated.
 
 Analyzing Entity <FSM_SendSamples> in library <work> (Architecture <behavioral>).
 Entity <FSM_SendSamples> analyzed. Unit <FSM_SendSamples> generated.
 
-Analyzing Entity <KbdDec> in library <work> (Architecture <RTL>).
+Analyzing Entity <KbdDec> in library <work> (Architecture <rtl>).
 Entity <KbdDec> analyzed. Unit <KbdDec> generated.
 
 
@@ -172,6 +173,7 @@ Unit <FSM_SendSamples> synthesized.
 
 Synthesizing Unit <KbdDec>.
     Related source file is "C:/Users/lab/Desktop/swilgosz/wav_player_v1/KbdDec.vhd".
+WARNING:Xst:647 - Input <Keydown> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 Unit <KbdDec> synthesized.
 
 
@@ -475,13 +477,13 @@ Delay:               7.263ns (Levels of Logic = 4)
 
 
 Total REAL time to Xst completion: 11.00 secs
-Total CPU time to Xst completion: 10.41 secs
+Total CPU time to Xst completion: 10.54 secs
  
 --> 
 
 Total memory usage is 228532 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   11 (   0 filtered)
+Number of warnings :   13 (   0 filtered)
 Number of infos    :    6 (   0 filtered)
 

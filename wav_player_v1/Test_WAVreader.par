@@ -1,7 +1,7 @@
 Release 14.7 par P.20131013 (nt)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-LAB016-04::  Tue Jun 02 11:36:23 2015
+LAB016-04::  Tue Jun 02 12:00:18 2015
 
 par -w -intstyle ise -ol high -t 1 Test_WAVreader_map.ncd Test_WAVreader.ncd
 Test_WAVreader.pcf 
@@ -184,7 +184,7 @@ All signals are completely routed.
 Total REAL time to PAR completion: 17 secs 
 Total CPU time to PAR completion: 17 secs 
 
-Peak Memory Usage:  235 MB
+Peak Memory Usage:  236 MB
 
 Placement: Completed - No errors found.
 Routing: Completed - No errors found.

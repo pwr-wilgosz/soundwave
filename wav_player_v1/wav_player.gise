@@ -161,7 +161,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1433237806" xil_pn:in_ck="-6912517462151262388" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="-8874667686081582353" xil_pn:start_ts="1433237804">
+    <transform xil_pn:end_ts="1433239258" xil_pn:in_ck="-6912517462151262388" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="-8874667686081582353" xil_pn:start_ts="1433239256">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="Test_WAVreader.vhf"/>
@@ -186,7 +186,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1433237769" xil_pn:in_ck="5729247482083331775" xil_pn:name="TRANEXT_xstsynthesize_spartan3e" xil_pn:prop_ck="5509839620292320818" xil_pn:start_ts="1433237756">
+    <transform xil_pn:end_ts="1433239207" xil_pn:in_ck="5729247482083331775" xil_pn:name="TRANEXT_xstsynthesize_spartan3e" xil_pn:prop_ck="5509839620292320818" xil_pn:start_ts="1433239194">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
@@ -212,7 +212,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1433237776" xil_pn:in_ck="-1488688107786331679" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="-3269088094346240798" xil_pn:start_ts="1433237770">
+    <transform xil_pn:end_ts="1433239213" xil_pn:in_ck="-1488688107786331679" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="-3269088094346240798" xil_pn:start_ts="1433239207">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
@@ -222,7 +222,7 @@
       <outfile xil_pn:name="_ngo"/>
       <outfile xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
     </transform>
-    <transform xil_pn:end_ts="1433237782" xil_pn:in_ck="-1488688107786331678" xil_pn:name="TRANEXT_map_spartan3" xil_pn:prop_ck="-5849673150125579957" xil_pn:start_ts="1433237776">
+    <transform xil_pn:end_ts="1433239218" xil_pn:in_ck="-1488688107786331678" xil_pn:name="TRANEXT_map_spartan3" xil_pn:prop_ck="-5849673150125579957" xil_pn:start_ts="1433239213">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
@@ -236,7 +236,7 @@
       <outfile xil_pn:name="Test_WAVreader_usage.xml"/>
       <outfile xil_pn:name="_xmsgs/map.xmsgs"/>
     </transform>
-    <transform xil_pn:end_ts="1433237803" xil_pn:in_ck="-2401153541109511685" xil_pn:name="TRANEXT_par_spartan3" xil_pn:prop_ck="-5563652517805085498" xil_pn:start_ts="1433237782">
+    <transform xil_pn:end_ts="1433239239" xil_pn:in_ck="-2401153541109511685" xil_pn:name="TRANEXT_par_spartan3" xil_pn:prop_ck="-5563652517805085498" xil_pn:start_ts="1433239218">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
@@ -251,7 +251,7 @@
       <outfile xil_pn:name="Test_WAVreader_par.xrpt"/>
       <outfile xil_pn:name="_xmsgs/par.xmsgs"/>
     </transform>
-    <transform xil_pn:end_ts="1433237814" xil_pn:in_ck="-6912517462151267837" xil_pn:name="TRANEXT_bitFile_spartan3e" xil_pn:prop_ck="-7817169320884990698" xil_pn:start_ts="1433237806">
+    <transform xil_pn:end_ts="1433239247" xil_pn:in_ck="-6912517462151267837" xil_pn:name="TRANEXT_bitFile_spartan3e" xil_pn:prop_ck="-7817169320884990698" xil_pn:start_ts="1433239239">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="Test_WAVreader.ut"/>
@@ -262,7 +262,7 @@
       <outfile xil_pn:name="webtalk.log"/>
       <outfile xil_pn:name="webtalk_pn.xml"/>
     </transform>
-    <transform xil_pn:end_ts="1433237820" xil_pn:in_ck="-6924499671558549427" xil_pn:name="TRAN_configureTargetDevice" xil_pn:prop_ck="5582947192412673156" xil_pn:start_ts="1433237818">
+    <transform xil_pn:end_ts="1433239260" xil_pn:in_ck="-6924499671558549427" xil_pn:name="TRAN_configureTargetDevice" xil_pn:prop_ck="5582947192412673156" xil_pn:start_ts="1433239258">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
