@@ -1,0 +1,5 @@
+[Inputs]
+=Code[7:0]=
+[Outputs]
+=DEC[3:0]=
+[BiDir]
