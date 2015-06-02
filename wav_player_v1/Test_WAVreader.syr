@@ -4,7 +4,7 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.11 secs
+Total CPU time to Xst completion: 0.12 secs
  
 --> Parameter xsthdpdir set to xst
 
@@ -105,10 +105,10 @@ Slice Utilization Ratio Delta      : 5
 *                          HDL Compilation                              *
 =========================================================================
 Compiling vhdl file "C:/Users/lab/Desktop/swilgosz/wav_player_v1/KbdDec.vhd" in Library work.
-Entity <kbddec> compiled.
-Entity <kbddec> (Architecture <rtl>) compiled.
+Architecture rtl of Entity kbddec is up to date.
 Compiling vhdl file "C:/Users/lab/Desktop/swilgosz/wav_player_v1/Test_WAVreader.vhf" in Library work.
-Architecture behavioral of Entity test_wavreader is up to date.
+Entity <test_wavreader> compiled.
+Entity <test_wavreader> (Architecture <behavioral>) compiled.
 
 =========================================================================
 *                     Design Hierarchy Analysis                         *
@@ -124,15 +124,15 @@ Analyzing hierarchy for entity <KbdDec> in library <work> (architecture <rtl>).
 *                            HDL Analysis                               *
 =========================================================================
 Analyzing Entity <Test_WAVreader> in library <work> (Architecture <behavioral>).
-WARNING:Xst:2211 - "C:/Users/lab/Desktop/swilgosz/wav_player_v1/Test_WAVreader.vhf" line 185: Instantiating black box module <RotaryEnc>.
-WARNING:Xst:2211 - "C:/Users/lab/Desktop/swilgosz/wav_player_v1/Test_WAVreader.vhf" line 192: Instantiating black box module <WAVreader>.
-WARNING:Xst:753 - "C:/Users/lab/Desktop/swilgosz/wav_player_v1/Test_WAVreader.vhf" line 228: Unconnected output port 'SF_CE0' of component 'DACWrite'.
-WARNING:Xst:2211 - "C:/Users/lab/Desktop/swilgosz/wav_player_v1/Test_WAVreader.vhf" line 228: Instantiating black box module <DACWrite>.
-WARNING:Xst:2211 - "C:/Users/lab/Desktop/swilgosz/wav_player_v1/Test_WAVreader.vhf" line 248: Instantiating black box module <LCD1x64>.
-WARNING:Xst:753 - "C:/Users/lab/Desktop/swilgosz/wav_player_v1/Test_WAVreader.vhf" line 275: Unconnected output port 'E0' of component 'PS2_Kbd'.
-WARNING:Xst:753 - "C:/Users/lab/Desktop/swilgosz/wav_player_v1/Test_WAVreader.vhf" line 275: Unconnected output port 'F0' of component 'PS2_Kbd'.
-WARNING:Xst:753 - "C:/Users/lab/Desktop/swilgosz/wav_player_v1/Test_WAVreader.vhf" line 275: Unconnected output port 'DO_Rdy' of component 'PS2_Kbd'.
-WARNING:Xst:2211 - "C:/Users/lab/Desktop/swilgosz/wav_player_v1/Test_WAVreader.vhf" line 275: Instantiating black box module <PS2_Kbd>.
+WARNING:Xst:2211 - "C:/Users/lab/Desktop/swilgosz/wav_player_v1/Test_WAVreader.vhf" line 173: Instantiating black box module <RotaryEnc>.
+WARNING:Xst:2211 - "C:/Users/lab/Desktop/swilgosz/wav_player_v1/Test_WAVreader.vhf" line 180: Instantiating black box module <WAVreader>.
+WARNING:Xst:753 - "C:/Users/lab/Desktop/swilgosz/wav_player_v1/Test_WAVreader.vhf" line 216: Unconnected output port 'SF_CE0' of component 'DACWrite'.
+WARNING:Xst:2211 - "C:/Users/lab/Desktop/swilgosz/wav_player_v1/Test_WAVreader.vhf" line 216: Instantiating black box module <DACWrite>.
+WARNING:Xst:2211 - "C:/Users/lab/Desktop/swilgosz/wav_player_v1/Test_WAVreader.vhf" line 236: Instantiating black box module <LCD1x64>.
+WARNING:Xst:753 - "C:/Users/lab/Desktop/swilgosz/wav_player_v1/Test_WAVreader.vhf" line 247: Unconnected output port 'E0' of component 'PS2_Kbd'.
+WARNING:Xst:753 - "C:/Users/lab/Desktop/swilgosz/wav_player_v1/Test_WAVreader.vhf" line 247: Unconnected output port 'F0' of component 'PS2_Kbd'.
+WARNING:Xst:753 - "C:/Users/lab/Desktop/swilgosz/wav_player_v1/Test_WAVreader.vhf" line 247: Unconnected output port 'DO_Rdy' of component 'PS2_Kbd'.
+WARNING:Xst:2211 - "C:/Users/lab/Desktop/swilgosz/wav_player_v1/Test_WAVreader.vhf" line 247: Instantiating black box module <PS2_Kbd>.
 Entity <Test_WAVreader> analyzed. Unit <Test_WAVreader> generated.
 
 Analyzing Entity <FSM_SendSamples> in library <work> (Architecture <behavioral>).
@@ -178,7 +178,7 @@ Unit <KbdDec> synthesized.
 
 Synthesizing Unit <Test_WAVreader>.
     Related source file is "C:/Users/lab/Desktop/swilgosz/wav_player_v1/Test_WAVreader.vhf".
-WARNING:Xst:653 - Signal <Line<59:16>> is used but never assigned. This sourceless signal will be automatically connected to value 00000000000000000000000000000000000000000000.
+WARNING:Xst:653 - Signal <Line<47:8>> is used but never assigned. This sourceless signal will be automatically connected to value 0000000000000000000000000000000000000000.
 Unit <Test_WAVreader> synthesized.
 
 
@@ -272,11 +272,10 @@ Optimization Goal                  : Speed
 Keep Hierarchy                     : No
 
 Design Statistics
-# IOs                              : 37
+# IOs                              : 33
 
 Cell Usage :
-# BELS                             : 2198
-#      BUF                         : 4
+# BELS                             : 2194
 #      GND                         : 6
 #      INV                         : 63
 #      LUT1                        : 103
@@ -313,8 +312,8 @@ Cell Usage :
 #      SRL16                       : 2
 # Clock Buffers                    : 1
 #      BUFGP                       : 1
-# IO Buffers                       : 36
-#      IBUF                        : 11
+# IO Buffers                       : 32
+#      IBUF                        : 7
 #      IOBUF                       : 4
 #      OBUF                        : 21
 =========================================================================
@@ -329,8 +328,8 @@ Selected Device : 3s500efg320-4
  Number of 4 input LUTs:               1548  out of   9312    16%  
     Number used as logic:              1546
     Number used as Shift registers:       2
- Number of IOs:                          37
- Number of bonded IOBs:                  37  out of    232    15%  
+ Number of IOs:                          33
+ Number of bonded IOBs:                  33  out of    232    14%  
  Number of BRAMs:                         1  out of     20     5%  
  Number of GCLKs:                         1  out of     24     4%  
 
@@ -370,8 +369,8 @@ Timing Summary:
 ---------------
 Speed Grade: -4
 
-   Minimum period: 11.111ns (Maximum Frequency: 90.004MHz)
-   Minimum input arrival time before clock: 10.065ns
+   Minimum period: 11.408ns (Maximum Frequency: 87.658MHz)
+   Minimum input arrival time before clock: 6.760ns
    Maximum output required time after clock: 7.731ns
    Maximum combinational path delay: 7.263ns
 
@@ -381,50 +380,27 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'Clk_50MHz'
-  Clock period: 11.111ns (frequency: 90.004MHz)
-  Total number of paths / destination ports: 40165 / 1600
+  Clock period: 11.408ns (frequency: 87.658MHz)
+  Total number of paths / destination ports: 40345 / 1600
 -------------------------------------------------------------------------
-Delay:               11.111ns (Levels of Logic = 7)
-  Source:            XLXI_2/XLXI_1/XLXI_89/cntBytes_5 (FF)
-  Destination:       XLXI_2/XLXI_3/DO_R_9 (FF)
+Delay:               11.408ns (Levels of Logic = 11)
+  Source:            XLXI_82/reg11b_1 (FF)
+  Destination:       XLXI_2/XLXI_1/XLXI_90/State_23 (FF)
   Source Clock:      Clk_50MHz rising
   Destination Clock: Clk_50MHz rising
 
-  Data Path: XLXI_2/XLXI_1/XLXI_89/cntBytes_5 to XLXI_2/XLXI_3/DO_R_9
+  Data Path: XLXI_82/reg11b_1 to XLXI_2/XLXI_1/XLXI_90/State_23
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDRE:C->Q             3   0.591   0.706  XLXI_1/XLXI_89/cntBytes_5 (XLXI_1/XLXI_89/cntBytes<5>)
-     LUT3:I0->O            1   0.704   0.455  XLXI_1/XLXI_89/Full512_mux0000233_SW0 (N348)
-     LUT4_D:I2->LO         1   0.704   0.135  XLXI_1/XLXI_89/Full512_mux0000233 (N551)
-     LUT3:I2->O            6   0.704   0.673  XLXI_1/XLXI_89/NextState_0_cmp_eq000011 (XLXI_1/XLXI_89/N3)
-     LUT4:I3->O           65   0.704   1.352  XLXI_3/State_mux0006<11>11111_1 (XLXI_3/State_mux0006<11>11111)
-     LUT2:I1->O            9   0.704   0.824  XLXI_3/State_mux0006<11>1121 (XLXI_3/DO_L_0_and0000)
-     LUT4_L:I3->LO         1   0.704   0.135  XLXI_3/DO_R_10_not0001_SW0 (N263)
-     LUT3:I2->O            8   0.704   0.757  XLXI_3/DO_R_10_not0001 (XLXI_3/DO_R_10_not0001)
-     FDRE:CE                   0.555          XLXI_3/DO_R_10
-    ----------------------------------------
-    Total                     11.111ns (6.074ns logic, 5.037ns route)
-                                       (54.7% logic, 45.3% route)
-
-=========================================================================
-Timing constraint: Default OFFSET IN BEFORE for Clock 'Clk_50MHz'
-  Total number of paths / destination ports: 203 / 183
--------------------------------------------------------------------------
-Offset:              10.065ns (Levels of Logic = 10)
-  Source:            SW_2 (PAD)
-  Destination:       XLXI_2/XLXI_1/XLXI_90/State_23 (FF)
-  Destination Clock: Clk_50MHz rising
-
-  Data Path: SW_2 to XLXI_2/XLXI_1/XLXI_90/State_23
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     IBUF:I->O             1   1.218   0.420  SW_2_IBUF (SW_2_IBUF)
-     BUF:I->O              2   0.704   0.622  XLXI_43 (FName<2>)
+     FDE:C->Q              7   0.591   0.883  reg11b_1 (DO<0>)
+     end scope: 'XLXI_82'
+     LUT3:I0->O            2   0.704   0.622  XLXI_86/DEC<0>42 (N6)
+     LUT4:I0->O            1   0.704   0.000  XLXI_86/DEC<0>38_F (N15)
+     MUXF5:I0->O           3   0.321   0.706  XLXI_86/DEC<0>38 (Line<0>)
      begin scope: 'XLXI_2'
-     LUT4:I0->O            1   0.704   0.499  XLXI_1/XLXI_90/NextState_and000421 (XLXI_1/XLXI_90/NextState_and000421)
-     LUT4:I1->O            1   0.704   0.595  XLXI_1/XLXI_90/NextState_and000468 (XLXI_1/XLXI_90/NextState_and000468)
+     LUT4_L:I0->LO         1   0.704   0.275  XLXI_1/XLXI_90/NextState_and000410 (XLXI_1/XLXI_90/NextState_and000410)
+     LUT4:I0->O            1   0.704   0.595  XLXI_1/XLXI_90/NextState_and000468 (XLXI_1/XLXI_90/NextState_and000468)
      LUT3_D:I0->LO         1   0.704   0.135  XLXI_1/XLXI_90/NextState_and0004180 (N534)
      LUT4:I2->O            1   0.704   0.595  XLXI_1/XLXI_90/State_mux0002<8>126 (XLXI_1/XLXI_90/State_mux0002<8>126)
      LUT4:I0->O            1   0.704   0.000  XLXI_1/XLXI_90/State_mux0002<8>150_F (N496)
@@ -432,8 +408,31 @@ Offset:              10.065ns (Levels of Logic = 10)
      LUT4:I3->O            1   0.704   0.000  XLXI_1/XLXI_90/State_mux0002<8>1771 (XLXI_1/XLXI_90/State_mux0002<8>177)
      FDS:D                     0.308          XLXI_1/XLXI_90/State_23
     ----------------------------------------
-    Total                     10.065ns (6.775ns logic, 3.290ns route)
-                                       (67.3% logic, 32.7% route)
+    Total                     11.408ns (7.173ns logic, 4.235ns route)
+                                       (62.9% logic, 37.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'Clk_50MHz'
+  Total number of paths / destination ports: 187 / 183
+-------------------------------------------------------------------------
+Offset:              6.760ns (Levels of Logic = 5)
+  Source:            BTN_SOUTH (PAD)
+  Destination:       XLXI_2/XLXI_3/State_16 (FF)
+  Destination Clock: Clk_50MHz rising
+
+  Data Path: BTN_SOUTH to XLXI_2/XLXI_3/State_16
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           102   1.218   1.288  BTN_SOUTH_IBUF (BTN_SOUTH_IBUF)
+     begin scope: 'XLXI_2'
+     LUT4:I3->O            4   0.704   0.591  XLXI_3/State_mux0006<17>1211 (XLXI_3/N34)
+     LUT4:I3->O           18   0.704   1.243  XLXI_3/State_mux0006<17>121 (XLXI_3/N25)
+     LUT3:I0->O            1   0.704   0.000  XLXI_3/State_mux0006<21>11 (XLXI_3/State_mux0006<21>1)
+     FD:D                      0.308          XLXI_3/State_2
+    ----------------------------------------
+    Total                      6.760ns (3.638ns logic, 3.122ns route)
+                                       (53.8% logic, 46.2% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'Clk_50MHz'
@@ -481,12 +480,12 @@ Delay:               7.263ns (Levels of Logic = 4)
 =========================================================================
 
 
-Total REAL time to Xst completion: 10.00 secs
-Total CPU time to Xst completion: 10.73 secs
+Total REAL time to Xst completion: 11.00 secs
+Total CPU time to Xst completion: 10.51 secs
  
 --> 
 
-Total memory usage is 228660 kilobytes
+Total memory usage is 228980 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :   12 (   0 filtered)

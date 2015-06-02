@@ -29,3 +29,5 @@ vhdtdtfi -lib work KbdDec.vhd -prj wav_player -o KbdDec.spl -module KbdDec -temp
 spl2sym -intstyle ise -family spartan3e KbdDec.spl C:/Users/lab/Desktop/swilgosz/wav_player_v1/KbdDec.sym 
 vhdtdtfi -lib work KbdDec.vhd -prj wav_player -o KbdDec.spl -module KbdDec -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
 spl2sym -intstyle ise -family spartan3e KbdDec.spl C:/Users/lab/Desktop/swilgosz/wav_player_v1/KbdDec.sym 
+vhdtdtfi -lib work KbdDec.vhd -prj wav_player -o KbdDec.spl -module KbdDec -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e KbdDec.spl C:/Users/lab/Desktop/swilgosz/wav_player_v1/KbdDec.sym 
