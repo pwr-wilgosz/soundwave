@@ -4,35 +4,49 @@ use IEEE.STD_LOGIC_ARITH.ALL;
 use IEEE.STD_LOGIC_UNSIGNED.ALL;
 
 entity KbdDec is
-    Port ( CODE : in  STD_LOGIC_VECTOR (7 downto 0);
-           DEC : out  STD_LOGIC_VECTOR (7 downto 0));
+    Port ( Code : in  STD_LOGIC_VECTOR( 7 downto 0 );
+			  DEC : out  STD_LOGIC_VECTOR( 3 downto 0 ));
 end KbdDec;
 
 architecture RTL of KbdDec is
 begin
 
-  process( CODE )
+  process( Code )
   begin
-    case CODE is
+    case Code is
+	 
+      when X"16" => -- "1"
+        DEC <= X"1";
 
-      when "100" & X"45" => -- "0"
-        DEC <= X"30";
-        
-      when "100" & X"16" => -- "1"
-        DEC <= X"31";
-        
-      when "101" & X"6C" => -- Home
-        DEC <= X"80";  -- LCD Home1
-        
-      when "100" & X"5A" => -- Enter
-        DEC <= X"C0";  -- LCD Home2
+		when X"1E" => -- "2"
+        DEC <= X"2";
+		
+		when X"26" => -- "3"
+        DEC <= X"3";
+		  
+		when X"25" => -- "4"
+        DEC <= X"4";
+		
+		when X"2E" => -- "5"
+        DEC <= X"5";
+		  
+		when X"36" => -- "6"
+        DEC <= X"6";
+		  
+		when X"3D" => -- "7"
+        DEC <= X"7";
+		
+		when X"3E" => -- "8"
+        DEC <= X"8";
+		  
+		when X"46" => -- "9"
+        DEC <= X"9";
+
         
       when others =>
-        DEC <= "--------";
+        DEC <= "----";
         
     end case;
   end process;
 
 end RTL;
-
-

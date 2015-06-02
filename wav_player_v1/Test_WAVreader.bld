@@ -2,8 +2,8 @@ Release 14.7 ngdbuild P.20131013 (nt)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 Command Line: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt\unwrapped\ngdbuild.exe -intstyle
-ise -dd _ngo -nt timestamp -uc LCD.ucf -uc GenIO.ucf -uc PS2_USB_SDC.ucf -uc
-ADC_DAC.ucf -p xc3s500e-fg320-4 Test_WAVreader.ngc Test_WAVreader.ngd
+ise -dd _ngo -nt timestamp -uc ADC_DAC.ucf -uc GenIO.ucf -uc LCD.ucf -uc
+PS2_USB_SDC.ucf -p xc3s500e-fg320-4 Test_WAVreader.ngc Test_WAVreader.ngd
 
 Reading NGO file
 "C:/Users/lab/Desktop/swilgosz/wav_player_v1/Test_WAVreader.ngc" ...
@@ -20,10 +20,10 @@ Loading design module
 Gathering constraint information from source properties...
 Done.
 
-Annotating constraints to design from ucf file "LCD.ucf" ...
-Annotating constraints to design from ucf file "GenIO.ucf" ...
-Annotating constraints to design from ucf file "PS2_USB_SDC.ucf" ...
 Annotating constraints to design from ucf file "ADC_DAC.ucf" ...
+Annotating constraints to design from ucf file "GenIO.ucf" ...
+Annotating constraints to design from ucf file "LCD.ucf" ...
+Annotating constraints to design from ucf file "PS2_USB_SDC.ucf" ...
 Resolving constraint associations...
 Checking Constraint Associations...
 INFO:ConstraintSystem - The Period constraint <NET "Clk_50MHz" PERIOD = 20.0ns
@@ -33,10 +33,10 @@ INFO:ConstraintSystem - The Period constraint <NET "Clk_50MHz" PERIOD = 20.0ns
 Done...
 
 Checking expanded design ...
-WARNING:NgdBuild:452 - logical net 'N10' has no driver
-WARNING:NgdBuild:452 - logical net 'N11' has no driver
-WARNING:NgdBuild:452 - logical net 'N12' has no driver
-WARNING:NgdBuild:452 - logical net 'N13' has no driver
+WARNING:NgdBuild:452 - logical net 'N26' has no driver
+WARNING:NgdBuild:452 - logical net 'N27' has no driver
+WARNING:NgdBuild:452 - logical net 'N28' has no driver
+WARNING:NgdBuild:452 - logical net 'N29' has no driver
 
 Partition Implementation Status
 -------------------------------
@@ -49,7 +49,7 @@ NGDBUILD Design Results Summary:
   Number of errors:     0
   Number of warnings:   4
 
-Total memory usage is 122772 kilobytes
+Total memory usage is 123604 kilobytes
 
 Writing NGD file "Test_WAVreader.ngd" ...
 Total REAL time to NGDBUILD completion:  3 sec

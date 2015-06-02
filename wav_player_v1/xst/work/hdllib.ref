@@ -1,4 +1,6 @@
-EN test_wavreader NULL C:/Users/lab/Desktop/swilgosz/wav_player_v1/Test_WAVreader.vhf sub00/vhpl02 1432029270
+EN test_wavreader NULL C:/Users/lab/Desktop/swilgosz/wav_player_v1/Test_WAVreader.vhf sub00/vhpl02 1433232937
 AR fsm_sendsamples behavioral C:/Users/lab/Desktop/swks/wav_player_v1/FSM_SendSamples.vhd sub00/vhpl01 1429606938
 EN fsm_sendsamples NULL C:/Users/lab/Desktop/swks/wav_player_v1/FSM_SendSamples.vhd sub00/vhpl00 1429606937
-AR test_wavreader behavioral C:/Users/lab/Desktop/swilgosz/wav_player_v1/Test_WAVreader.vhf sub00/vhpl03 1432029271
+AR kbddec rtl C:/Users/lab/Desktop/swilgosz/wav_player_v1/KbdDec.vhd sub00/vhpl05 1433232936
+EN kbddec NULL C:/Users/lab/Desktop/swilgosz/wav_player_v1/KbdDec.vhd sub00/vhpl04 1433232935
+AR test_wavreader behavioral C:/Users/lab/Desktop/swilgosz/wav_player_v1/Test_WAVreader.vhf sub00/vhpl03 1433232938

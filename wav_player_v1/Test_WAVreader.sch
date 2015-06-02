@@ -59,9 +59,8 @@
         <signal name="XLXN_326" />
         <signal name="PS2_Clk" />
         <signal name="PS2_Data" />
-        <signal name="Line(63:56)" />
-        <signal name="XLXN_552" />
-        <signal name="XLXN_550(7:0)" />
+        <signal name="XLXN_553(7:0)" />
+        <signal name="Line(63:60)" />
         <port polarity="Output" name="SPI_SS_B" />
         <port polarity="Output" name="AMP_CS" />
         <port polarity="Output" name="AD_CONV" />
@@ -220,6 +219,14 @@
             <rect width="256" x="64" y="-256" height="256" />
             <line x2="0" y1="-32" y2="-32" x1="64" />
         </blockdef>
+        <blockdef name="KbdDec">
+            <timestamp>2015-6-2T7:58:39</timestamp>
+            <rect width="64" x="320" y="20" height="24" />
+            <line x2="384" y1="32" y2="32" x1="320" />
+            <rect width="64" x="0" y="-44" height="24" />
+            <line x2="0" y1="-32" y2="-32" x1="64" />
+            <rect width="256" x="64" y="-64" height="128" />
+        </blockdef>
         <block symbolname="FSM_SendSamples" name="XLXI_30">
             <blockpin signalname="XLXN_396" name="DWr_Busy" />
             <blockpin signalname="XLXN_377" name="SampRdy" />
@@ -255,7 +262,7 @@
             <blockpin signalname="Clk_50MHz" name="Clk_Sys" />
         </block>
         <block symbolname="constant" name="XLXI_59">
-            <attr value="3FFF" name="CValue">
+            <attr value="0000" name="CValue">
                 <trait delete="all:1 sym:0" />
                 <trait editname="all:1 sch:0" />
                 <trait valuetype="BitVector 32 Hexadecimal" />
@@ -333,8 +340,12 @@
             <blockpin name="E0" />
             <blockpin name="F0" />
             <blockpin name="DO_Rdy" />
-            <blockpin signalname="Line(63:56)" name="DO(7:0)" />
+            <blockpin signalname="XLXN_553(7:0)" name="DO(7:0)" />
             <blockpin signalname="Clk_50MHz" name="Clk_Sys" />
+        </block>
+        <block symbolname="KbdDec" name="XLXI_83">
+            <blockpin signalname="XLXN_553(7:0)" name="CODE(7:0)" />
+            <blockpin signalname="Line(63:60)" name="DEC(3:0)" />
         </block>
     </netlist>
     <sheet sheetnum="1" width="3520" height="2720">
@@ -653,16 +664,16 @@
         <iomarker fontsize="28" x="224" y="272" name="PS2_Clk" orien="R180" />
         <iomarker fontsize="28" x="224" y="336" name="PS2_Data" orien="R180" />
         <bustap x2="1984" y1="2224" y2="2224" x1="2080" />
-        <branch name="Line(63:56)">
-            <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="1056" y="560" type="branch" />
-            <wire x2="1040" y1="272" y2="272" x1="720" />
-            <wire x2="1456" y1="272" y2="272" x1="1040" />
-            <wire x2="1456" y1="272" y2="400" x1="1456" />
-            <wire x2="1648" y1="400" y2="400" x1="1456" />
-            <wire x2="1648" y1="400" y2="560" x1="1648" />
-            <wire x2="1648" y1="560" y2="560" x1="1056" />
-            <wire x2="1056" y1="560" y2="2224" x1="1056" />
+        <instance x="864" y="304" name="XLXI_83" orien="R0">
+        </instance>
+        <branch name="XLXN_553(7:0)">
+            <wire x2="864" y1="272" y2="272" x1="720" />
+        </branch>
+        <branch name="Line(63:60)">
+            <wire x2="1056" y1="464" y2="2224" x1="1056" />
             <wire x2="1984" y1="2224" y2="2224" x1="1056" />
+            <wire x2="1248" y1="464" y2="464" x1="1056" />
+            <wire x2="1248" y1="336" y2="464" x1="1248" />
         </branch>
     </sheet>
 </drawing>

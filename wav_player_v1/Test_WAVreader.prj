@@ -1,1 +1,2 @@
+vhdl work "KbdDec.vhd"
 vhdl work "Test_WAVreader.vhf"

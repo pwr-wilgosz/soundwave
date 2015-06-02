@@ -7,7 +7,7 @@
 -- \   \   \/     Version : 14.7
 --  \   \         Application : sch2hdl
 --  /   /         Filename : Test_WAVreader.vhf
--- /___/   /\     Timestamp : 05/19/2015 11:54:26
+-- /___/   /\     Timestamp : 06/02/2015 10:00:33
 -- \   \  /  \ 
 --  \___\/\___\ 
 --
@@ -77,6 +77,7 @@ architecture BEHAVIORAL of Test_WAVreader is
    signal XLXN_395    : std_logic;
    signal XLXN_396    : std_logic;
    signal XLXN_549    : std_logic_vector (15 downto 0);
+   signal XLXN_553    : std_logic_vector (7 downto 0);
    component RotaryEnc
       port ( ROT_A : in    std_logic; 
              ROT_B : in    std_logic; 
@@ -173,9 +174,14 @@ architecture BEHAVIORAL of Test_WAVreader is
              Clk_Sys   : in    std_logic);
    end component;
    
+   component KbdDec
+      port ( CODE : in    std_logic_vector (7 downto 0); 
+             DEC  : out   std_logic_vector (3 downto 0));
+   end component;
+   
 begin
    FName(7 downto 4) <= x"3";
-   XLXN_549(15 downto 0) <= x"3FFF";
+   XLXN_549(15 downto 0) <= x"0000";
    XLXI_1 : RotaryEnc
       port map (Clk=>Clk_50MHz,
                 ROT_A=>ROT_A,
@@ -271,10 +277,14 @@ begin
                 Clk_50MHz=>Clk_50MHz,
                 PS2_Clk=>PS2_Clk,
                 PS2_Data=>PS2_Data,
-                DO(7 downto 0)=>Line(63 downto 56),
+                DO(7 downto 0)=>XLXN_553(7 downto 0),
                 DO_Rdy=>open,
                 E0=>open,
                 F0=>open);
+   
+   XLXI_83 : KbdDec
+      port map (CODE(7 downto 0)=>XLXN_553(7 downto 0),
+                DEC(3 downto 0)=>Line(63 downto 60));
    
 end BEHAVIORAL;
 

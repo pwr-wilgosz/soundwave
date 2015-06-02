@@ -22,6 +22,8 @@
   <sourceproject xmlns="http://www.xilinx.com/XMLSchema" xil_pn:fileType="FILE_XISE" xil_pn:name="wav_player.xise"/>
 
   <files xmlns="http://www.xilinx.com/XMLSchema">
+    <file xil_pn:fileType="FILE_SPL" xil_pn:name="KbdDec.spl"/>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="KbdDec.sym" xil_pn:origination="imported"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGDBUILD_LOG" xil_pn:name="Test_WAVreader.bld"/>
     <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="Test_WAVreader.cmd_log"/>
     <file xil_pn:fileType="FILE_JHD" xil_pn:name="Test_WAVreader.jhd"/>
@@ -157,7 +159,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1432029267" xil_pn:in_ck="-6912517462151262388" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="-8874667686081582353" xil_pn:start_ts="1432029266">
+    <transform xil_pn:end_ts="1433232033" xil_pn:in_ck="-6912517462151262388" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="-8874667686081582353" xil_pn:start_ts="1433232032">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="Test_WAVreader.vhf"/>
@@ -182,78 +184,91 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1432029279" xil_pn:in_ck="-6912517462151258958" xil_pn:name="TRANEXT_xstsynthesize_spartan3e" xil_pn:prop_ck="5509839620292320818" xil_pn:start_ts="1432029267">
+    <transform xil_pn:end_ts="1433232947" xil_pn:in_ck="5729247482083331775" xil_pn:name="TRANEXT_xstsynthesize_spartan3e" xil_pn:prop_ck="5509839620292320818" xil_pn:start_ts="1433232933">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="InputAdded"/>
-      <status xil_pn:value="InputChanged"/>
-      <status xil_pn:value="InputRemoved"/>
       <status xil_pn:value="OutputChanged"/>
-      <status xil_pn:value="OutputRemoved"/>
+      <outfile xil_pn:name="Test_WAVreader.jhd"/>
+      <outfile xil_pn:name="Test_WAVreader.lso"/>
+      <outfile xil_pn:name="Test_WAVreader.ngc"/>
+      <outfile xil_pn:name="Test_WAVreader.ngr"/>
+      <outfile xil_pn:name="Test_WAVreader.prj"/>
+      <outfile xil_pn:name="Test_WAVreader.stx"/>
+      <outfile xil_pn:name="Test_WAVreader.syr"/>
+      <outfile xil_pn:name="Test_WAVreader.xst"/>
+      <outfile xil_pn:name="Test_WAVreader_Test_WAVreader_sch_tb_beh.prj"/>
+      <outfile xil_pn:name="Test_WAVreader_Test_WAVreader_sch_tb_stx_beh.prj"/>
+      <outfile xil_pn:name="Test_WAVreader_vhdl.prj"/>
+      <outfile xil_pn:name="Test_WAVreader_xst.xrpt"/>
+      <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
+      <outfile xil_pn:name="webtalk_pn.xml"/>
+      <outfile xil_pn:name="xst"/>
     </transform>
     <transform xil_pn:end_ts="1429612813" xil_pn:in_ck="-7225803389109225829" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="2387041697373196930" xil_pn:start_ts="1429612813">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1432029285" xil_pn:in_ck="-1488688107786331679" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="-3269088094346240798" xil_pn:start_ts="1432029279">
+    <transform xil_pn:end_ts="1433232952" xil_pn:in_ck="-1488688107786331679" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="-3269088094346240798" xil_pn:start_ts="1433232947">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
-      <status xil_pn:value="NotReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="InputRemoved"/>
-      <status xil_pn:value="OutputRemoved"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="Test_WAVreader.bld"/>
+      <outfile xil_pn:name="Test_WAVreader.ngd"/>
+      <outfile xil_pn:name="Test_WAVreader_ngdbuild.xrpt"/>
+      <outfile xil_pn:name="_ngo"/>
+      <outfile xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
     </transform>
-    <transform xil_pn:end_ts="1432029291" xil_pn:in_ck="-1488688107786331678" xil_pn:name="TRANEXT_map_spartan3" xil_pn:prop_ck="-5849673150125579957" xil_pn:start_ts="1432029285">
+    <transform xil_pn:end_ts="1433232958" xil_pn:in_ck="-1488688107786331678" xil_pn:name="TRANEXT_map_spartan3" xil_pn:prop_ck="-5849673150125579957" xil_pn:start_ts="1433232952">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
-      <status xil_pn:value="NotReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="InputRemoved"/>
-      <status xil_pn:value="OutputChanged"/>
-      <status xil_pn:value="OutputRemoved"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="Test_WAVreader.pcf"/>
+      <outfile xil_pn:name="Test_WAVreader_map.map"/>
+      <outfile xil_pn:name="Test_WAVreader_map.mrp"/>
+      <outfile xil_pn:name="Test_WAVreader_map.ncd"/>
+      <outfile xil_pn:name="Test_WAVreader_map.ngm"/>
+      <outfile xil_pn:name="Test_WAVreader_map.xrpt"/>
+      <outfile xil_pn:name="Test_WAVreader_summary.xml"/>
+      <outfile xil_pn:name="Test_WAVreader_usage.xml"/>
+      <outfile xil_pn:name="_xmsgs/map.xmsgs"/>
     </transform>
-    <transform xil_pn:end_ts="1432029317" xil_pn:in_ck="-2401153541109511685" xil_pn:name="TRANEXT_par_spartan3" xil_pn:prop_ck="-5563652517805085498" xil_pn:start_ts="1432029291">
+    <transform xil_pn:end_ts="1433232985" xil_pn:in_ck="-2401153541109511685" xil_pn:name="TRANEXT_par_spartan3" xil_pn:prop_ck="-5563652517805085498" xil_pn:start_ts="1433232958">
       <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="WarningsGenerated"/>
-      <status xil_pn:value="NotReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="InputRemoved"/>
-      <status xil_pn:value="OutputRemoved"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="Test_WAVreader.ncd"/>
+      <outfile xil_pn:name="Test_WAVreader.pad"/>
+      <outfile xil_pn:name="Test_WAVreader.par"/>
+      <outfile xil_pn:name="Test_WAVreader.ptwx"/>
+      <outfile xil_pn:name="Test_WAVreader.unroutes"/>
+      <outfile xil_pn:name="Test_WAVreader.xpi"/>
+      <outfile xil_pn:name="Test_WAVreader_pad.csv"/>
+      <outfile xil_pn:name="Test_WAVreader_pad.txt"/>
+      <outfile xil_pn:name="Test_WAVreader_par.xrpt"/>
+      <outfile xil_pn:name="_xmsgs/par.xmsgs"/>
     </transform>
-    <transform xil_pn:end_ts="1432029325" xil_pn:in_ck="-6912517462151267837" xil_pn:name="TRANEXT_bitFile_spartan3e" xil_pn:prop_ck="-7817169320884990698" xil_pn:start_ts="1432029317">
+    <transform xil_pn:end_ts="1433232994" xil_pn:in_ck="-6912517462151267837" xil_pn:name="TRANEXT_bitFile_spartan3e" xil_pn:prop_ck="-7817169320884990698" xil_pn:start_ts="1433232985">
       <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="NotReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="InputRemoved"/>
-      <status xil_pn:value="OutputRemoved"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="Test_WAVreader.ut"/>
+      <outfile xil_pn:name="_xmsgs/bitgen.xmsgs"/>
+      <outfile xil_pn:name="test_wavreader.bgn"/>
+      <outfile xil_pn:name="test_wavreader.bit"/>
+      <outfile xil_pn:name="test_wavreader.drc"/>
+      <outfile xil_pn:name="webtalk.log"/>
+      <outfile xil_pn:name="webtalk_pn.xml"/>
     </transform>
-    <transform xil_pn:end_ts="1432025680" xil_pn:in_ck="-6924499671558549427" xil_pn:name="TRAN_configureTargetDevice" xil_pn:prop_ck="5582947192412673156" xil_pn:start_ts="1432025678">
+    <transform xil_pn:end_ts="1433233056" xil_pn:in_ck="-6924499671558549427" xil_pn:name="TRAN_configureTargetDevice" xil_pn:prop_ck="5582947192412673156" xil_pn:start_ts="1433232994">
       <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="NotReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
-      <status xil_pn:value="InputChanged"/>
-      <status xil_pn:value="InputRemoved"/>
+      <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1432029317" xil_pn:in_ck="-1488688107786331810" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416186" xil_pn:start_ts="1432029312">
+    <transform xil_pn:end_ts="1433232985" xil_pn:in_ck="-1488688107786331810" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416186" xil_pn:start_ts="1433232980">
       <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="NotReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="InputRemoved"/>
-      <status xil_pn:value="OutputRemoved"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="Test_WAVreader.twr"/>
+      <outfile xil_pn:name="Test_WAVreader.twx"/>
+      <outfile xil_pn:name="_xmsgs/trce.xmsgs"/>
     </transform>
   </transforms>
 
