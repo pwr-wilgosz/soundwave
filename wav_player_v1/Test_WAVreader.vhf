@@ -7,11 +7,11 @@
 -- \   \   \/     Version : 14.7
 --  \   \         Application : sch2hdl
 --  /   /         Filename : Test_WAVreader.vhf
--- /___/   /\     Timestamp : 06/02/2015 10:49:47
+-- /___/   /\     Timestamp : 04/21/2015 10:09:30
 -- \   \  /  \ 
 --  \___\/\___\ 
 --
---Command: sch2hdl -intstyle ise -family spartan3e -flat -suppress -vhdl C:/Users/lab/Desktop/swilgosz/wav_player_v1/Test_WAVreader.vhf -w C:/Users/lab/Desktop/swilgosz/wav_player_v1/Test_WAVreader.sch
+--Command: sch2hdl -intstyle ise -family spartan3e -flat -suppress -vhdl C:/Users/lab/Desktop/swks/wav_player/Test_WAVreader.vhf -w C:/Users/lab/Desktop/swks/wav_player/Test_WAVreader.sch
 --Design Name: Test_WAVreader
 --Device: spartan3e
 --Purpose:
@@ -28,12 +28,14 @@ use UNISIM.Vcomponents.ALL;
 entity Test_WAVreader is
    port ( BTN_SOUTH   : in    std_logic; 
           Clk_50MHz   : in    std_logic; 
-          PS2_Clk     : in    std_logic; 
-          PS2_Data    : in    std_logic; 
           ROT_A       : in    std_logic; 
           ROT_B       : in    std_logic; 
           SDC_MISO    : in    std_logic; 
           SPI_MISO    : in    std_logic; 
+          SW_0        : in    std_logic; 
+          SW_1        : in    std_logic; 
+          SW_2        : in    std_logic; 
+          SW_3        : in    std_logic; 
           AD_CONV     : out   std_logic; 
           AMP_CS      : out   std_logic; 
           DAC_CLR     : out   std_logic; 
@@ -57,6 +59,8 @@ entity Test_WAVreader is
 end Test_WAVreader;
 
 architecture BEHAVIORAL of Test_WAVreader is
+   attribute BOX_TYPE   : string ;
+   signal FName       : std_logic_vector (7 downto 0);
    signal Line        : std_logic_vector (63 downto 0);
    signal XLXN_326    : std_logic;
    signal XLXN_327    : std_logic;
@@ -71,7 +75,6 @@ architecture BEHAVIORAL of Test_WAVreader is
    signal XLXN_395    : std_logic;
    signal XLXN_396    : std_logic;
    signal XLXN_549    : std_logic_vector (15 downto 0);
-   signal XLXN_553    : std_logic_vector (7 downto 0);
    component RotaryEnc
       port ( ROT_A : in    std_logic; 
              ROT_B : in    std_logic; 
@@ -151,25 +154,15 @@ architecture BEHAVIORAL of Test_WAVreader is
              SF_CE     : out   std_logic);
    end component;
    
-   component PS2_Kbd
-      port ( PS2_Clk   : in    std_logic; 
-             PS2_Data  : in    std_logic; 
-             Clk_50MHz : in    std_logic; 
-             E0        : out   std_logic; 
-             F0        : out   std_logic; 
-             DO_Rdy    : out   std_logic; 
-             DO        : out   std_logic_vector (7 downto 0); 
-             Clk_Sys   : in    std_logic);
+   component BUF
+      port ( I : in    std_logic; 
+             O : out   std_logic);
    end component;
-   
-   component KbdDec
-      port ( CODE : in    std_logic_vector (7 downto 0); 
-             DEC  : out   std_logic_vector (3 downto 0));
-   end component;
+   attribute BOX_TYPE of BUF : component is "BLACK_BOX";
    
 begin
-   Line(7 downto 4) <= x"3";
-   XLXN_549(15 downto 0) <= x"0000";
+   FName(7 downto 4) <= x"3";
+   XLXN_549(15 downto 0) <= x"FFF0";
    XLXI_1 : RotaryEnc
       port map (Clk=>Clk_50MHz,
                 ROT_A=>ROT_A,
@@ -182,7 +175,7 @@ begin
                 Clk_Sys=>Clk_50MHz,
                 Clk_50MHz=>Clk_50MHz,
                 DO_Pop=>XLXN_395,
-                FName(7 downto 0)=>Line(7 downto 0),
+                FName(7 downto 0)=>FName(7 downto 0),
                 Reset=>BTN_SOUTH,
                 SDC_MISO=>SDC_MISO,
                 Start=>XLXN_326,
@@ -192,7 +185,7 @@ begin
                 DO_Rdy=>XLXN_377,
                 Error(2 downto 0)=>LED(2 downto 0),
                 FmtMnS=>LED6,
-                FmtSRate(15 downto 0)=>Line(63 downto 48),
+                FmtSRate(15 downto 0)=>Line(15 downto 0),
                 Fmt8n16=>LED5,
                 SDC_MOSI=>SDC_MOSI,
                 SDC_SCK=>SDC_SCK,
@@ -244,19 +237,21 @@ begin
                 SF_CE=>SF_CE,
                 LCD_D(3 downto 0)=>LCD_D(3 downto 0));
    
-   XLXI_82 : PS2_Kbd
-      port map (Clk_Sys=>Clk_50MHz,
-                Clk_50MHz=>Clk_50MHz,
-                PS2_Clk=>PS2_Clk,
-                PS2_Data=>PS2_Data,
-                DO(7 downto 0)=>XLXN_553(7 downto 0),
-                DO_Rdy=>open,
-                E0=>open,
-                F0=>open);
+   XLXI_42 : BUF
+      port map (I=>SW_3,
+                O=>FName(3));
    
-   XLXI_86 : KbdDec
-      port map (CODE(7 downto 0)=>XLXN_553(7 downto 0),
-                DEC(3 downto 0)=>Line(3 downto 0));
+   XLXI_43 : BUF
+      port map (I=>SW_2,
+                O=>FName(2));
+   
+   XLXI_44 : BUF
+      port map (I=>SW_1,
+                O=>FName(1));
+   
+   XLXI_69 : BUF
+      port map (I=>SW_0,
+                O=>FName(0));
    
 end BEHAVIORAL;
 

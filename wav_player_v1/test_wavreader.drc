@@ -1,7 +1,7 @@
 Release 14.7 Drc P.20131013 (nt)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-Tue Jun 02 10:53:24 2015
+Tue Jun 02 11:04:13 2015
 
 drc -z Test_WAVreader.ncd Test_WAVreader.pcf
 

@@ -1,6 +1,0 @@
-EN cb16ce_mxilinx_test_lcd1x64 NULL C:/Users/lab/Desktop/swks/lcd_ps/Test_LCD1x64.vhf sub00/vhpl02 1429607174
-EN ftce_mxilinx_test_lcd1x64 NULL C:/Users/lab/Desktop/swks/lcd_ps/Test_LCD1x64.vhf sub00/vhpl00 1429607172
-EN test_lcd1x64 NULL C:/Users/lab/Desktop/swks/lcd_ps/Test_LCD1x64.vhf sub00/vhpl04 1429607176
-AR cb16ce_mxilinx_test_lcd1x64 behavioral C:/Users/lab/Desktop/swks/lcd_ps/Test_LCD1x64.vhf sub00/vhpl03 1429607175
-AR ftce_mxilinx_test_lcd1x64 behavioral C:/Users/lab/Desktop/swks/lcd_ps/Test_LCD1x64.vhf sub00/vhpl01 1429607173
-AR test_lcd1x64 behavioral C:/Users/lab/Desktop/swks/lcd_ps/Test_LCD1x64.vhf sub00/vhpl05 1429607177

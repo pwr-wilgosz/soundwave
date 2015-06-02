@@ -1,21 +1,13 @@
-V3 21
-FL C:/Users/lab/Desktop/soundwave/wav_player_v1/Test_WAVreader.vhf 2015/05/12.08:34:17 P.20131013
-FL C:/Users/lab/Desktop/swilgosz/wav_player_v1/KbdDec.vhd 2015/06/02.10:15:16 P.20131013
-EN work/KbdDec 1433234990 \
-      FL C:/Users/lab/Desktop/swilgosz/wav_player_v1/KbdDec.vhd \
-      PB ieee/std_logic_1164 1381692176 PB ieee/std_logic_arith 1381692177 \
-      PB ieee/STD_LOGIC_UNSIGNED 1381692179
-AR work/KbdDec/RTL 1433234991 \
-      FL C:/Users/lab/Desktop/swilgosz/wav_player_v1/KbdDec.vhd EN work/KbdDec 1433234990
-FL C:/Users/lab/Desktop/swilgosz/wav_player_v1/Test_WAVreader.vhf 2015/06/02.10:49:47 P.20131013
-EN work/Test_WAVreader 1433234992 \
+V3 16
+FL C:/Users/lab/Desktop/swilgosz/wav_player_v1/Test_WAVreader.vhf 2015/06/02.10:59:18 P.20131013
+EN work/Test_WAVreader 1433235797 \
       FL C:/Users/lab/Desktop/swilgosz/wav_player_v1/Test_WAVreader.vhf \
       PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181 LB UNISIM \
       PH unisim/VCOMPONENTS 1381692182
-AR work/Test_WAVreader/BEHAVIORAL 1433234993 \
+AR work/Test_WAVreader/BEHAVIORAL 1433235798 \
       FL C:/Users/lab/Desktop/swilgosz/wav_player_v1/Test_WAVreader.vhf \
-      EN work/Test_WAVreader 1433234992 CP RotaryEnc CP WAVreader \
-      CP FSM_SendSamples CP DACWrite CP LCD1x64 CP PS2_Kbd CP KbdDec
+      EN work/Test_WAVreader 1433235797 CP RotaryEnc CP WAVreader \
+      CP FSM_SendSamples CP DACWrite CP LCD1x64 CP BUF
 FL C:/Users/lab/Desktop/swks/wav_player/FSM_SendSamples.vhd 2015/04/21.08:50:56 P.20131013
 FL C:/Users/lab/Desktop/swks/wav_player/Test_WAVreader.vhf 2015/04/21.10:09:30 P.20131013
 FL C:/Users/lab/Desktop/swks/wav_player_v1/FSM_SendSamples.vhd 2015/04/21.08:50:56 P.20131013
@@ -25,4 +17,4 @@ EN work/FSM_SendSamples 1429606937 \
 AR work/FSM_SendSamples/Behavioral 1429606938 \
       FL C:/Users/lab/Desktop/swks/wav_player_v1/FSM_SendSamples.vhd \
       EN work/FSM_SendSamples 1429606937
-FL C:/Users/lab/Desktop/swks/wav_player_v1/Test_WAVreader.vhf 2015/04/21.12:39:54 P.20131013
+FL C:/Users/lab/Desktop/swks/wav_player_v1/Test_WAVreader.vhf 2015/04/21.10:09:30 P.20131013
